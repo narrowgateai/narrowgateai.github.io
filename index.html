@@ -1745,7 +1745,7 @@
 </blockquote>
 <p>There are a lot of ways for a practitioner to get confused, and lost when analyzing and modeling high-dimensional data. However, with the right tools, process, and discipline. any fear or anxiety is replaced with increased confidence and peace, and robust insights are derived almost magically.</p>
 <p>The tools and methods implemented within this package are meant to serve as a starting point for predictive modeling efforts with high-dimensional tabular and/or time series data.  </p>
-<p>By focusing on meaningful and relevant processes and robust statistical metrics, the data science practitioner can be more confident that the "narrow gate" is being entered before model training begins.</p>
+<p>By focusing on meaningful and relevant processes and robust statistical metrics, the data science practitioner can be more confident that the "narrow gate" is being entered before any predictive modeling efforts begin.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¤</a></h2>
 <h3 id="pip">pip<a class="headerlink" href="#pip" title="Permanent link">¤</a></h3>
 <div class="highlight"><pre><span></span><code>pip install narrowgate
@@ -1798,6 +1798,8 @@ Out of respect for Dr. Masters (see <a href="#Background">Background</a>) and th
 <li>A <code>numba.jitclass</code> implementation of the traditional <code>LinearRegression</code> modeling method.</li>
 <li>supports the capability for embedding within a <code>numba.prange</code> loop, thereby allowing high-performance, multi-threaded execution.</li>
 </ul>
+<p>#### <a href="https://narrowgateai.github.io/models/hmm/"><code>HMM_nb</code></a>
+    * A <code>numba.jitclass</code> implementation of a Hidden Markov Model</p>
 <h3 id="screeners"><a id="screeners"></a> Screeners<a class="headerlink" href="#screeners" title="Permanent link">¤</a></h3>
 <p>Contains functionality that can be used for feature evaluation, selection and/or filtering.</p>
 <h4 id="univariatescreener"><a href="https://narrowgateai.github.io/screeners/univariate/"><code>UnivariateScreener</code></a><a class="headerlink" href="#univariatescreener" title="Permanent link">¤</a></h4>
@@ -1839,14 +1841,14 @@ Out of respect for Dr. Masters (see <a href="#Background">Background</a>) and th
 <li>automatically stops step-wise addition of features if the addition of a new feature causes the model to perform worse or any performance gains are evaluated to be random in nature.</li>
 <li>contains a <code>SelectorMixin</code> extension for use within scikit-learn <code>Pipeline</code> constructors (<code>EnhancedStepwiseFeatureSelector</code>)</li>
 </ul>
-<h4 id="hmmtargetlinkscreener"><a href="https://narrowgateai.github.io/screeners/stepwise/"><code>HMMTargetLinkScreener</code></a><a class="headerlink" href="#hmmtargetlinkscreener" title="Permanent link">¤</a></h4>
+<h4 id="hmmtargetlinkscreener"><a href="https://narrowgateai.github.io/screeners/hmm_target/"><code>HMMTargetLinkScreener</code></a><a class="headerlink" href="#hmmtargetlinkscreener" title="Permanent link">¤</a></h4>
 <ul>
 <li>Time-series based feature-screening method utilizing state probabilities from Hidden Markov Models (HMM).</li>
 <li>Hidden Markov Models and their resulting state probabilities are derived from predictor variable combinations independent of the target variable.</li>
 <li>State probabilities are, then, used as feature inputs to a linear-quadratic regression model on a continuous target variable.</li>
 <li>supports Monte Carlo Permutation Testing in order to help assess if predictive performance of any HMM model is truly superior or if the performance should simply be attributed to good luck.</li>
 </ul>
-<h4 id="hmmmemoryscreener"><a href="https://narrowgateai.github.io/screeners/stepwise/"><code>HMMMemoryScreener</code></a><a class="headerlink" href="#hmmmemoryscreener" title="Permanent link">¤</a></h4>
+<h4 id="hmmmemoryscreener"><a href="https://narrowgateai.github.io/screeners/hmm_memory/"><code>HMMMemoryScreener</code></a><a class="headerlink" href="#hmmmemoryscreener" title="Permanent link">¤</a></h4>
 <ul>
 <li>complement to <code>HMMTargetLinkScreener</code></li>
 <li>assesses whether a Hidden Markov model produced by a combination of variables possesses meaningful HMM memory for use in a predictive model</li>
