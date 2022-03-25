@@ -1773,7 +1773,7 @@ python setup.py develop
 Out of respect for Dr. Masters (see <a href="#Background">Background</a>) and the numerous books he has written describing the algorithms implemented in this package, any documentation and corresponding examples will be primarily descriptive in nature. For an in-depth explanation of the implemented algorithms and/or a more meaningful explanation of metrics and exploratory processes, the practitioner is, once again, referred to the texts referenced in the <a href="#Background">Background</a> section of this document.</p>
 <h3 id="encoders"><a id="encoders"></a> Encoders<a class="headerlink" href="#encoders" title="Permanent link">¤</a></h3>
 <p>The functionality present within this category coincides with similar classes and functionality present within the <code>sklearn.preprocessing</code> sub-module.</p>
-<h4 id="nominal2ordinalencoder"><a href="https://narrowgateai.github.io/nom_ord/"><code>Nominal2OrdinalEncoder</code></a><a class="headerlink" href="#nominal2ordinalencoder" title="Permanent link">¤</a></h4>
+<h4 id="nominal2ordinalencoder"><a href="https://narrowgateai.github.io/encoders/nom_ord/"><code>Nominal2OrdinalEncoder</code></a><a class="headerlink" href="#nominal2ordinalencoder" title="Permanent link">¤</a></h4>
 <ul>
 <li>Encodes categorical features to a numerical value based on a numerical target variable.</li>
 <li>Utilizes percent-ranked values of the target variable rather than the raw numerical target values in an effort to minimize outlier impact.</li>
@@ -1781,19 +1781,19 @@ Out of respect for Dr. Masters (see <a href="#Background">Background</a>) and th
 </ul>
 <h3 id="model-selection"><a id="model-selection"></a> Model Selection<a class="headerlink" href="#model-selection" title="Permanent link">¤</a></h3>
 <p>Contains functionality similar to what is present in the <code>sklearn.model_selection</code> sub-module.</p>
-<h4 id="walkforwardtimeseriescv"><code>WalkforwardTimeSeriesCV</code><a class="headerlink" href="#walkforwardtimeseriescv" title="Permanent link">¤</a></h4>
+<h4 id="walkforwardtimeseriescv"><a href="https://narrowgateai.github.io/model_selection/walk_backward/"><code>WalkforwardTimeSeriesCV</code></a><a class="headerlink" href="#walkforwardtimeseriescv" title="Permanent link">¤</a></h4>
 <ul>
 <li>An Enhanced <code>TimeSeriesSplit</code> class that utilizes a Pandas <code>DatetimeIndex</code> to split temporal data into train/test data sets working backwards through time, and thereby, maximizing usage of the most recent data.</li>
 <li>By utilizing the <code>DatetimeIndex,</code> the splitting behavior of the class insures  cohorts of observations with the same granularity column value will be grouped together in the same train/test data split.</li>
 </ul>
-<h4 id="combinatorialpurgedcrossvalidation"><code>CombinatorialPurgedCrossValidation</code><a class="headerlink" href="#combinatorialpurgedcrossvalidation" title="Permanent link">¤</a></h4>
+<h4 id="combinatorialpurgedcrossvalidation"><a href="https://narrowgateai.github.io/model_selection/cpcv/"><code>CombinatorialPurgedCrossValidation</code></a><a class="headerlink" href="#combinatorialpurgedcrossvalidation" title="Permanent link">¤</a></h4>
 <ul>
 <li>Implementation of a more robust cross-validation method.</li>
 <li>Originally developed by Marcos Lopez de Prado, et. al,  and described in Chapter 12 of the book, Advances in Financial Machine Learning.</li>
 </ul>
 <h3 id="models"><a id="models"></a> Models<a class="headerlink" href="#models" title="Permanent link">¤</a></h3>
 <p>Contains modeling functionality adhering to the <code>fit</code> and <code>predict</code> paradigm within the <code>scikit-learn</code> package.</p>
-<h4 id="linearregression_nb"><code>LinearRegression_nb</code><a class="headerlink" href="#linearregression_nb" title="Permanent link">¤</a></h4>
+<h4 id="linearregression_nb"><a href="https://narrowgateai.github.io/models/linear_regression/"><code>LinearRegression_nb</code></a><a class="headerlink" href="#linearregression_nb" title="Permanent link">¤</a></h4>
 <ul>
 <li>A <code>numba.jitclass</code> implementation of the traditional <code>LinearRegression</code> modeling method.</li>
 <li>supports the capability for embedding within a <code>numba.prange</code> loop, thereby allowing high-performance, multi-threaded execution.</li>
@@ -1876,7 +1876,7 @@ Out of respect for Dr. Masters (see <a href="#Background">Background</a>) and th
 <h4 id="cpugpu">CPU/GPU<a class="headerlink" href="#cpugpu" title="Permanent link">¤</a></h4>
 <p>An additional benefit to using Numba is the capability of writing native Python code for <a href="https://numba.pydata.org/numba-doc/latest/cuda/index.html">highly parallelized execution on the GPU</a>. The majority of functionality present within this package currently only supports execution on a user's CPU. However, future package enhancements include supporting identical operations on either the CPU or GPU.</p>
 <h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">¤</a></h2>
-<p>For a more detailed explanation (including examples) of the functionality present within this package, please visit the <a href="(https://narrowgateio.github.io/)"><code>narrowgate</code> documentation</a>.</p>
+<p>For a more detailed explanation (including examples) of the functionality present within this package, please visit the <a href="https://narrowgateio.github.io/"><code>narrowgate</code> documentation</a>.</p>
 
               
             </article>
