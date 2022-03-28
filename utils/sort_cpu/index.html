@@ -313,6 +313,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notebooks/univariate_screener/" class="md-nav__link">
+        Example
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1576,7 +1590,7 @@ shape : (ncases, )</p></td>
 <span class="sd">        identical to the sorted `values`.   </span>
 <span class="sd">        shape : (ncases, )</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">assert</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">slave</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">assert</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">sidecar</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">sorted_idxs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
     <span class="n">reorder_jit</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">sorted_idxs</span><span class="p">)</span>
     <span class="n">reorder_jit</span><span class="p">(</span><span class="n">sidecar</span><span class="p">,</span> <span class="n">sorted_idxs</span><span class="p">)</span>

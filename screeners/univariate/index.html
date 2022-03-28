@@ -402,6 +402,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notebooks/univariate_screener/" class="md-nav__link">
+        Example
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2002,6 +2016,11 @@ screen
 
       <p>Executes univariate screening.</p>
 <p>Prior to execution validates and transforms <code>X</code> and <code>y</code> inputs. </p>
+<p>Currently, <code>X</code> must only contain numeric data types. Any nominal or
+categorical data types must be converted to a numeric data type prior 
+to execution. Please see the documentation for 
+<a class="autorefs autorefs-internal" href="../../encoders/nom_ord/#narrowgate.encoders.Nominal2OrdinalEncoder">Nominal2OrdinalEncoder</a>
+as one potential solution for doing so.</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -2022,7 +2041,8 @@ screen
           <td><p>predictor variable dataset<br />
 pandas DataFrame or numpy multi-dimensional array representing the
 values of the predictor variables to be screened in relation to the
-target variable, <code>y</code>.</p></td>
+target variable, <code>y</code>.<br />
+All variables must be numeric.</p></td>
           <td>
               <em>required</em>
           </td>
@@ -2171,7 +2191,14 @@ considered experimental at this time.</p></td>
 <span class="normal">326</span>
 <span class="normal">327</span>
 <span class="normal">328</span>
-<span class="normal">329</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">screen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">screen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
     <span class="n">X</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">],</span> 
     <span class="n">y</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">],</span> 
     <span class="n">target</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -2181,13 +2208,20 @@ considered experimental at this time.</p></td>
 
 <span class="sd">    Prior to execution validates and transforms `X` and `y` inputs. </span>
 
+<span class="sd">    Currently, `X` must only contain numeric data types. Any nominal or</span>
+<span class="sd">    categorical data types must be converted to a numeric data type prior </span>
+<span class="sd">    to execution. Please see the documentation for </span>
+<span class="sd">    [Nominal2OrdinalEncoder][narrowgate.encoders.Nominal2OrdinalEncoder]</span>
+<span class="sd">    as one potential solution for doing so.</span>
+
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    X : </span>
 <span class="sd">        predictor variable dataset  </span>
 <span class="sd">        pandas DataFrame or numpy multi-dimensional array representing the</span>
 <span class="sd">        values of the predictor variables to be screened in relation to the</span>
-<span class="sd">        target variable, `y`.</span>
+<span class="sd">        target variable, `y`.  </span>
+<span class="sd">        All variables must be numeric. </span>
 <span class="sd">    y : </span>
 <span class="sd">        target variable series  </span>
 <span class="sd">        pandas Series or numpy 1-D array representing the values of the</span>
@@ -2214,7 +2248,7 @@ considered experimental at this time.</p></td>
     <span class="c1"># Validate objects being passed in</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
         <span class="n">X_raw</span><span class="p">,</span> <span class="n">y_raw</span><span class="p">,</span> <span class="n">X_cols</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_name</span> <span class="o">=</span> \
-            <span class="n">validate_pandas_inputs</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+            <span class="n">validate_pandas_inputs</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">raise_categorical_error</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">predictor_columns</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_obs</span> <span class="o">=</span> <span class="n">X_raw</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
@@ -2314,14 +2348,7 @@ and comparable format:</p>
 
         <details class="quote">
           <summary>Source code in <code>narrowgate/screeners/univariate/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">331</span>
-<span class="normal">332</span>
-<span class="normal">333</span>
-<span class="normal">334</span>
-<span class="normal">335</span>
-<span class="normal">336</span>
-<span class="normal">337</span>
-<span class="normal">338</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">338</span>
 <span class="normal">339</span>
 <span class="normal">340</span>
 <span class="normal">341</span>
@@ -2386,7 +2413,14 @@ and comparable format:</p>
 <span class="normal">400</span>
 <span class="normal">401</span>
 <span class="normal">402</span>
-<span class="normal">403</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">results</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A pandas DataFrame representing the calculated results produced from </span>
@@ -2487,14 +2521,7 @@ one or more predictor variables to the target variable.        </p>
 
         <details class="quote">
           <summary>Source code in <code>narrowgate/screeners/univariate/base.py</code></summary>
-          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">405</span>
-<span class="normal">406</span>
-<span class="normal">407</span>
-<span class="normal">408</span>
-<span class="normal">409</span>
-<span class="normal">410</span>
-<span class="normal">411</span>
-<span class="normal">412</span>
+          <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">412</span>
 <span class="normal">413</span>
 <span class="normal">414</span>
 <span class="normal">415</span>
@@ -2503,7 +2530,14 @@ one or more predictor variables to the target variable.        </p>
 <span class="normal">418</span>
 <span class="normal">419</span>
 <span class="normal">420</span>
-<span class="normal">421</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nd">@property</span>
 <span class="k">def</span> <span class="nf">crits</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    pandas Series of information measures representing the relationship of</span>
@@ -2565,13 +2599,13 @@ one or more predictor variables to the target variable.        </p>
       
       
         
-        <a href="../bivariate/" class="md-footer__link md-footer__link--next" aria-label="Next: BivariateScreener" rel="next">
+        <a href="../../notebooks/univariate_screener/" class="md-footer__link md-footer__link--next" aria-label="Next: Example" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              BivariateScreener
+              Example
             </div>
           </div>
           <div class="md-footer__button md-icon">

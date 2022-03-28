@@ -313,6 +313,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notebooks/univariate_screener/" class="md-nav__link">
+        Example
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1205,8 +1219,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#narrowgate.utils.test.generate_masters_sample_regression_data" class="md-nav__link">
-    generate_masters_sample_regression_data()
+  <a href="#narrowgate.utils.test.make_masters_sample_regression_data" class="md-nav__link">
+    make_masters_sample_regression_data()
   </a>
   
 </li>
@@ -1307,8 +1321,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#narrowgate.utils.test.generate_masters_sample_regression_data" class="md-nav__link">
-    generate_masters_sample_regression_data()
+  <a href="#narrowgate.utils.test.make_masters_sample_regression_data" class="md-nav__link">
+    make_masters_sample_regression_data()
   </a>
   
 </li>
@@ -1364,12 +1378,12 @@ package.</p>
 
 
 
-<h2 id="narrowgate.utils.test.generate_masters_sample_regression_data" class="doc doc-heading">
-generate_masters_sample_regression_data
+<h2 id="narrowgate.utils.test.make_masters_sample_regression_data" class="doc doc-heading">
+make_masters_sample_regression_data
 
 
-<a href="#narrowgate.utils.test.generate_masters_sample_regression_data" class="headerlink" title="Permanent link">¤</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">generate_masters_sample_regression_data</span><span class="p">(</span>
+<a href="#narrowgate.utils.test.make_masters_sample_regression_data" class="headerlink" title="Permanent link">¤</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">make_masters_sample_regression_data</span><span class="p">(</span>
     <span class="n">n_obs</span><span class="p">,</span> <span class="n">n_cols</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">32</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -1519,7 +1533,7 @@ shape: (n_obs,)</p></td>
 <span class="normal">66</span>
 <span class="normal">67</span>
 <span class="normal">68</span>
-<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">generate_masters_sample_regression_data</span><span class="p">(</span>
+<span class="normal">69</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">make_masters_sample_regression_data</span><span class="p">(</span>
     <span class="n">n_obs</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">n_cols</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">random_state</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">32</span><span class="p">):</span>
@@ -1572,9 +1586,9 @@ shape: (n_obs,)</p></td>
 
     <span class="c1"># Dependent variable (sum1234)</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
 
-    <span class="n">colnames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;x_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
-    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">y</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">X</span><span class="p">))</span>
+    <span class="n">colnames</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;x_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">colnames</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span>
@@ -1598,14 +1612,14 @@ make_regression_with_categoricals
 <a href="#narrowgate.utils.test.make_regression_with_categoricals" class="headerlink" title="Permanent link">¤</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">make_regression_with_categoricals</span><span class="p">(</span>
     <span class="n">n_obs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
-    <span class="n">n_cat_cols</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-    <span class="n">n_cat_informative</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-    <span class="n">n_cats_per_col</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_cat_vars</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_cat_vars_informative</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_cats_per_var</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
     <span class="n">imbalance</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
     <span class="n">noise</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
-    <span class="n">n_cont_cols</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">n_cont_vars</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">cont_weight</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
-    <span class="n">interactions</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">cat_interactions</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
     <span class="n">random_state</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
@@ -1617,7 +1631,7 @@ make_regression_with_categoricals
 This code has been adapted from the code present within the blog post 
 written by Brendan Hasz and available at the following URL:<br />
 <a href="https://brendanhasz.github.io/2019/03/04/target-encoding.html#data">https://brendanhasz.github.io/2019/03/04/target-encoding.html#data</a></p>
-<p>As an enhancement, this funciton includes a <code>random_state</code> parameter which
+<p>As an enhancement, this function includes a <code>random_state</code> parameter which
 supports reproducibility. In addition, several parameter names have been 
 changed to more closely align with naming conventions used within this
 package. </p>
@@ -1644,7 +1658,7 @@ package. </p>
           </td>
         </tr>
         <tr>
-          <td><code>n_cat_cols</code></td>
+          <td><code>n_cat_vars</code></td>
           <td>
                 <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
           </td>
@@ -1654,7 +1668,7 @@ package. </p>
           </td>
         </tr>
         <tr>
-          <td><code>n_cat_informative</code></td>
+          <td><code>n_cat_vars_informative</code></td>
           <td>
                 <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
           </td>
@@ -1665,7 +1679,7 @@ the target variable</p></td>
           </td>
         </tr>
         <tr>
-          <td><code>n_cats_per_col</code></td>
+          <td><code>n_cats_per_var</code></td>
           <td>
                 <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
           </td>
@@ -1700,7 +1714,7 @@ in some categories vs other categories.</p></td>
           </td>
         </tr>
         <tr>
-          <td><code>n_cont_cols</code></td>
+          <td><code>n_cont_vars</code></td>
           <td>
                 <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
           </td>
@@ -1721,7 +1735,7 @@ generated data set</p></td>
           </td>
         </tr>
         <tr>
-          <td><code>interactions</code></td>
+          <td><code>cat_interactions</code></td>
           <td>
                 <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
           </td>
@@ -1759,7 +1773,7 @@ features and not the continuous features.</p></td>
                 <code>pandas DataFrame </code>
           </td>
           <td><p>Synthetically-generated data set<br />
-shape: (n_obs, n_cat_cols+n_cont_features)</p></td>
+shape: (n_obs, n_cat_vars+n_cont_vars)</p></td>
         </tr>
         <tr>
 <td><code>y</code></td>          <td>
@@ -1947,17 +1961,16 @@ shape: (n_obs,) </p></td>
 <span class="normal">243</span>
 <span class="normal">244</span>
 <span class="normal">245</span>
-<span class="normal">246</span>
-<span class="normal">247</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">make_regression_with_categoricals</span><span class="p">(</span>
+<span class="normal">246</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">make_regression_with_categoricals</span><span class="p">(</span>
     <span class="n">n_obs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
-    <span class="n">n_cat_cols</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="n">n_cat_informative</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="n">n_cats_per_col</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_cat_vars</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_cat_vars_informative</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">n_cats_per_var</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
     <span class="n">imbalance</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
     <span class="n">noise</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
-    <span class="n">n_cont_cols</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">n_cont_vars</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
     <span class="n">cont_weight</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-    <span class="n">interactions</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">cat_interactions</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
     <span class="n">random_state</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">32</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -1968,7 +1981,7 @@ shape: (n_obs,) </p></td>
 <span class="sd">    written by Brendan Hasz and available at the following URL:  </span>
 <span class="sd">    https://brendanhasz.github.io/2019/03/04/target-encoding.html#data</span>
 
-<span class="sd">    As an enhancement, this funciton includes a `random_state` parameter which</span>
+<span class="sd">    As an enhancement, this function includes a `random_state` parameter which</span>
 <span class="sd">    supports reproducibility. In addition, several parameter names have been </span>
 <span class="sd">    changed to more closely align with naming conventions used within this</span>
 <span class="sd">    package. </span>
@@ -1977,12 +1990,12 @@ shape: (n_obs,) </p></td>
 <span class="sd">    ----------</span>
 <span class="sd">    n_obs: int</span>
 <span class="sd">        Number of rows/observations in the synthetically-generated data set</span>
-<span class="sd">    n_cat_cols: int</span>
+<span class="sd">    n_cat_vars: int</span>
 <span class="sd">        Number of categorical columns to generate</span>
-<span class="sd">    n_cat_informative: int</span>
+<span class="sd">    n_cat_vars_informative: int</span>
 <span class="sd">        Number of categorical columns that are informationally-related to </span>
 <span class="sd">        the target variable</span>
-<span class="sd">    n_cats_per_col: int</span>
+<span class="sd">    n_cats_per_var: int</span>
 <span class="sd">        Number of categories per categorical column</span>
 <span class="sd">    imbalance: float</span>
 <span class="sd">        Imbalance between the number of observations of each category in an </span>
@@ -1993,12 +2006,12 @@ shape: (n_obs,) </p></td>
 <span class="sd">        in some categories vs other categories.</span>
 <span class="sd">    noise: float</span>
 <span class="sd">        Noise to add to target variable</span>
-<span class="sd">    n_cont_cols: int</span>
+<span class="sd">    n_cont_vars: int</span>
 <span class="sd">        Number of continuous (non-categorical) columns to include in the</span>
 <span class="sd">        generated data set</span>
 <span class="sd">    cont_weight: float</span>
 <span class="sd">        Weight of the effect of the continuous variables on the target variable</span>
-<span class="sd">    interactions: float</span>
+<span class="sd">    cat_interactions: float</span>
 <span class="sd">        Proportion of the variance due to interaction effects.</span>
 <span class="sd">        Note that this only adds interaction effects between the categorical </span>
 <span class="sd">        features and not the continuous features.  </span>
@@ -2009,7 +2022,7 @@ shape: (n_obs,) </p></td>
 <span class="sd">    -------</span>
 <span class="sd">    X : pandas DataFrame </span>
 <span class="sd">        Synthetically-generated data set  </span>
-<span class="sd">        shape: (n_obs, n_cat_cols+n_cont_features)</span>
+<span class="sd">        shape: (n_obs, n_cat_vars+n_cont_vars)</span>
 <span class="sd">    y : pandas Series</span>
 <span class="sd">        Target variable  </span>
 <span class="sd">        shape: (n_obs,) </span>
@@ -2020,7 +2033,7 @@ shape: (n_obs,) </p></td>
 <span class="sd">        Beta-binomial probability mass function.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">beta</span>
-        <span class="kn">from</span> <span class="nn">scipy.misc</span> <span class="kn">import</span> <span class="n">comb</span>
+        <span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">comb</span>
         <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">comb</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">beta</span><span class="p">(</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">k</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="n">beta</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 
@@ -2029,21 +2042,21 @@ shape: (n_obs,) </p></td>
     <span class="k">elif</span> <span class="n">n_obs</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_obs must be one or greater&#39;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_cat_cols</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;n_cat_cols must be an int&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">n_cat_cols</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_cat_cols must be one or greater&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_cat_vars</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;n_cat_vars must be an int&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">n_cat_vars</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_cat_vars must be one or greater&#39;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_cat_informative</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;n_cat_informative must be an int&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">n_cat_informative</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_cat_informative must be non-negative&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_cat_vars_informative</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;n_cat_vars_informative must be an int&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">n_cat_vars_informative</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_cat_vars_informative must be non-negative&#39;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_cats_per_col</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;n_cats_per_col must be an int&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_cats_per_var</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;n_cats_per_var must be an int&#39;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">n_cats_per_col</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_cats_per_col must be one or greater&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n_cats_per_var</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_cats_per_var must be one or greater&#39;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">imbalance</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;imbalance must be a float&#39;</span><span class="p">)</span>
@@ -2055,69 +2068,68 @@ shape: (n_obs,) </p></td>
     <span class="k">elif</span> <span class="n">noise</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;noise must be positive&#39;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_cont_features</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;n_cont_features must be an int&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">n_cont_features</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_cont_features must be non-negative&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">n_cont_vars</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;n_cont_vars must be an int&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">n_cont_vars</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;n_cont_vars must be non-negative&#39;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cont_weight</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;cont_weight must be a float&#39;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">cont_weight</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;cont_weight must be non-negative&#39;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">interactions</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;interactions must be a float&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">interactions</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;interactions must be non-negative&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cat_interactions</span><span class="p">,</span> <span class="nb">float</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;cat_interactions must be a float&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">cat_interactions</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;cat_interactions must be non-negative&#39;</span><span class="p">)</span>
 
     <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>    
 
     <span class="c1"># Generate random categorical data</span>
     <span class="c1"># category probabilities are drawn from a beta-binomial distribution</span>
     <span class="c1"># with alpha=1 and  beta=imbalance+1</span>
-    <span class="n">cat_probs</span> <span class="o">=</span> <span class="n">beta_binomial</span><span class="p">(</span><span class="n">n_cats_per_col</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">imbalance</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">categories</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_obs</span><span class="p">,</span> <span class="n">n_cat_cols</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint64&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">iC</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cat_cols</span><span class="p">):</span>
-        <span class="n">categories</span><span class="p">[:,</span><span class="n">iC</span><span class="p">]</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_cats_per_col</span><span class="p">),</span>
-                                            <span class="n">size</span><span class="o">=</span><span class="n">n_obs</span><span class="p">,</span>
-                                            <span class="n">p</span><span class="o">=</span><span class="n">cat_probs</span><span class="p">)</span>
+    <span class="n">cat_probs</span> <span class="o">=</span> <span class="n">beta_binomial</span><span class="p">(</span><span class="n">n_cats_per_var</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">imbalance</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">categories</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_obs</span><span class="p">,</span> <span class="n">n_cat_vars</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;uint64&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">iC</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cat_vars</span><span class="p">):</span>
+        <span class="n">categories</span><span class="p">[:,</span><span class="n">iC</span><span class="p">]</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_cats_per_var</span><span class="p">),</span>
+                                      <span class="n">size</span><span class="o">=</span><span class="n">n_obs</span><span class="p">,</span>
+                                      <span class="n">p</span><span class="o">=</span><span class="n">cat_probs</span><span class="p">)</span>
 
     <span class="c1"># Generate random values for each category</span>
-    <span class="n">cat_vals</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_cats_per_col</span><span class="p">,</span> <span class="n">n_cat_cols</span><span class="p">)</span>
+    <span class="n">cat_vals</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">((</span><span class="n">n_cats_per_var</span><span class="p">,</span> <span class="n">n_cat_vars</span><span class="p">))</span>
 
     <span class="c1"># Set non-informative columns&#39; effect to 0</span>
-    <span class="n">cat_vals</span><span class="p">[:,:(</span><span class="n">n_cat_cols</span><span class="o">-</span><span class="n">n_cat_informative</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">cat_vals</span><span class="p">[:,:(</span><span class="n">n_cat_vars</span><span class="o">-</span><span class="n">n_cat_vars_informative</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="c1"># Compute target variable from categories and their values</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_obs</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">iC</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cat_cols</span><span class="p">):</span>
-        <span class="n">y</span> <span class="o">+=</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">-</span><span class="n">interactions</span><span class="p">)</span> <span class="o">*</span> <span class="n">cat_vals</span><span class="p">[</span><span class="n">categories</span><span class="p">[:,</span><span class="n">iC</span><span class="p">],</span> <span class="n">iC</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">iC</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cat_vars</span><span class="p">):</span>
+        <span class="n">y</span> <span class="o">+=</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">-</span><span class="n">cat_interactions</span><span class="p">)</span> <span class="o">*</span> <span class="n">cat_vals</span><span class="p">[</span><span class="n">categories</span><span class="p">[:,</span><span class="n">iC</span><span class="p">],</span> <span class="n">iC</span><span class="p">]</span>
 
     <span class="c1"># Add interaction effects</span>
-    <span class="k">if</span> <span class="n">interactions</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">iC1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cat_informative</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">iC2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iC1</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_cat_informative</span><span class="p">):</span>
-                <span class="n">int_vals</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_cats_per_col</span><span class="p">,</span>
-                                           <span class="n">n_cats_per_col</span><span class="p">)</span>
-                <span class="n">y</span> <span class="o">+=</span> <span class="n">interactions</span> <span class="o">*</span> <span class="n">int_vals</span><span class="p">[</span><span class="n">categories</span><span class="p">[:,</span><span class="n">iC1</span><span class="p">],</span>
+    <span class="k">if</span> <span class="n">cat_interactions</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">iC1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cat_vars_informative</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">iC2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iC1</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_cat_vars_informative</span><span class="p">):</span>
+                <span class="n">int_vals</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">((</span><span class="n">n_cats_per_var</span><span class="p">,</span> <span class="n">n_cats_per_var</span><span class="p">))</span>
+                <span class="n">y</span> <span class="o">+=</span> <span class="n">cat_interactions</span> <span class="o">*</span> <span class="n">int_vals</span><span class="p">[</span><span class="n">categories</span><span class="p">[:,</span><span class="n">iC1</span><span class="p">],</span>
                                              <span class="n">categories</span><span class="p">[:,</span><span class="n">iC2</span><span class="p">]]</span>
 
     <span class="c1"># Add noise</span>
-    <span class="n">y</span> <span class="o">+=</span> <span class="n">noise</span><span class="o">*</span><span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_obs</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">+=</span> <span class="n">noise</span><span class="o">*</span><span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">(</span><span class="n">n_obs</span><span class="p">)</span>
 
     <span class="c1"># Generate dataframe from categories</span>
     <span class="n">cat_strs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="mi">49</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)])</span> 
-                <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cats_per_col</span><span class="p">)]</span>
+                <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cats_per_var</span><span class="p">)]</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">iC</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cat_cols</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">iC</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cat_vars</span><span class="p">):</span>
         <span class="n">col_str</span> <span class="o">=</span> <span class="s1">&#39;categorical_&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">iC</span><span class="p">)</span>
         <span class="n">X</span><span class="p">[</span><span class="n">col_str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">cat_strs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">categories</span><span class="p">[:,</span><span class="n">iC</span><span class="p">]]</span>
 
     <span class="c1"># Add continuous features</span>
-    <span class="k">for</span> <span class="n">iC</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cont_features</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">iC</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_cont_vars</span><span class="p">):</span>
         <span class="n">col_str</span> <span class="o">=</span> <span class="s1">&#39;continuous_&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">iC</span><span class="p">)</span>
-        <span class="n">X</span><span class="p">[</span><span class="n">col_str</span><span class="p">]</span> <span class="o">=</span> <span class="n">cont_weight</span><span class="o">*</span><span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_obs</span><span class="p">)</span>
-        <span class="n">y</span> <span class="o">+=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">()</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="n">col_str</span><span class="p">]</span>
+        <span class="n">X</span><span class="p">[</span><span class="n">col_str</span><span class="p">]</span> <span class="o">=</span> <span class="n">cont_weight</span><span class="o">*</span><span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">(</span><span class="n">n_obs</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">+=</span> <span class="n">rng</span><span class="o">.</span><span class="n">standard_normal</span><span class="p">()</span><span class="o">*</span><span class="n">X</span><span class="p">[</span><span class="n">col_str</span><span class="p">]</span>
 
     <span class="c1"># Generate series from target</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>

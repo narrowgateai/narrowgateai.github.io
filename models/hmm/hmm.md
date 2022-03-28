@@ -1,1 +1,1 @@
-::: narrowgate.model.hmm.HMM_nb
+::: narrowgate.model.hidden_markov_model.HMM_nb
