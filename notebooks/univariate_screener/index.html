@@ -2945,22 +2945,29 @@ Information Criterion: Mutual Information
 <p>However, the following information is freely available from the <a href="http://www.timothymasters.info/varscreen.html">VarScreen user's manual</a> and summarized here for convenience.</p>
 <p>The <code>results</code> DataFrame consists of the following:</p>
 <ul>
-<li><p><code>Variable</code><br>
-the name of the predictor variable</p>
+<li><p><code>Variable</code></p>
+<ul>
+<li>the name of the predictor variable  </li>
+</ul>
 </li>
-<li><p><code>Solo p-value</code><br>
-the probability that a predictor variable having a strictly random relationship with the target could have had an information score at least as high as one obtained by sheer luck.</p>
+<li><p><code>Solo p-value</code></p>
+<ul>
+<li>the probability that a predictor variable having a strictly random relationship with the target could have had an information score at least as high as one obtained by sheer luck.  </li>
+</ul>
 </li>
-<li><p><code>Unbiased p-value</code><br>
-the probability that the best performing predictor variable could have attained its superior level of performance by sheer luck if all candidates were truly worthless.<br>
-This value is an upper bound for the true unbiased p-value of the candidate, and a very small value is an indication that the predictor variable has true predictive power.</p>
+<li><p><code>Unbiased p-value</code></p>
+<ul>
+<li>the probability that the best performing predictor variable could have attained its superior level of performance by sheer luck if all candidates were truly worthless.  </li>
+<li>This value is an upper bound for the true unbiased p-value of the candidate, and a very small value is an indication that the predictor variable has true predictive power.  </li>
+</ul>
 </li>
-<li><p><code>P(&lt;=median)</code><br>
-an estimation of superior quality of a predictor variable relative to other predictor variables present in the data set. <strong>measures relative power of predictor variables to one another, not absolute power</strong><br>
-only meaningful if the set of predictor variables being evaluated are known to have a non-random relationship to the target variable.<br>
-the estimated probability (via cross-validation) that the out-of-sample information value of the best predictor variable will be less than or equal to the
-median out-of-sample performance of all other predictor variables.<br>
-This value is controlled via the <code>cscv_subsets</code> parameter and refers to the number of folds to use in Combinatorially Symmetric Cross Validation. For more information about this method, please refer to the linked texts above.</p>
+<li><p><code>P(&lt;=median)</code></p>
+<ul>
+<li>an estimation of superior quality of a predictor variable relative to other predictor variables present in the data set. <strong>measures relative power of predictor variables to one another, not absolute power</strong>  </li>
+<li>only meaningful if the set of predictor variables being evaluated are known to have a non-random relationship to the target variable.  </li>
+<li>the estimated probability (via cross-validation) that the out-of-sample information value of the best predictor variable will be less than or equal to the median out-of-sample performance of all other predictor variables.   </li>
+<li>This value is controlled via the <code>cscv_subsets</code> parameter and refers to the number of folds to use in Combinatorially Symmetric Cross Validation. For more information about this method, please refer to the linked texts above.</li>
+</ul>
 </li>
 </ul>
 <p><strong>Unbiased p-value Alert</strong><br>
