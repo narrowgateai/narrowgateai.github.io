@@ -404,6 +404,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#needed" class="md-nav__link">
+    NEEDED
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1392,6 +1399,13 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#needed" class="md-nav__link">
+    NEEDED
   </a>
   
 </li>
@@ -2980,7 +2994,7 @@ Because the calculation of this value is overly conservative, large values at th
 <h3 id="example-2-continuous-screening-methods">Example 2 : Continuous Screening methods<a class="anchor-link" href="#example-2-continuous-screening-methods">&#182;</a></h3><p>The same data set used in the previous example will be used again in the call to demonstrate screening using a continuous information measure.</p>
 <p>The screening metric being used will be Spearman's rank correlation. Because the data set is known to not have any non-linearities present between the predictor and target variables, the results should be relatively the same as in the discretized example.</p>
 <p>Note that the parameters <code>nbins_predictors</code> and <code>nbins_target</code> are both set to <code>None</code> in order to invoke the rank correlation calculation.<br>
-In addition, the <code>information_measure</code> parameter must be changed as well.</p>
+In addition, the <code>information_criterion</code> parameter must be changed as well.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -3677,8 +3691,9 @@ Information Criterion: Mutual Information
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Notice the low mutual information values but alsso the low solo p-value and unbiased p-values as well.</p>
-<p>By not accounting for the serial correlation using <code>cyclic</code> as the <code>mcpt_type</code>, the screener has detected relationships between predictor and target variables when, in fact, there is none. The only relationship is the window length of the serial correlation.</p>
+<p>Notice the low mutual information values but also the low solo p-value and unbiased p-values as well.</p>
+<p>By not accounting for the serial correlation using <code>cyclic</code> as the <code>mcpt_type</code>, the screener has detected relationships between predictor and target variables when, in fact, there is none.<br>
+The only relationship is the window length of the serial correlation.</p>
 <p>Re-run the same screener but use <code>cyclic</code> instead.</p>
 
 </div>
@@ -4001,7 +4016,7 @@ Information Criterion: Mutual Information
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Additional examples with real-world data sets</p>
+<h3 id="needed">NEEDED<a class="anchor-link" href="#needed">&#182;</a></h3><p>Additional examples with real-world data sets</p>
 
 </div>
 </div>
