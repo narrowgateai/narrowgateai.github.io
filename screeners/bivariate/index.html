@@ -463,6 +463,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notebooks/bivariate_screener/" class="md-nav__link">
+        Example
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1990,9 +2004,9 @@ considered experimental at this time.</p></td>
 
     <span class="c1"># Validate objects being passed in</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">predictor_columns</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
         <span class="n">X_raw</span><span class="p">,</span> <span class="n">y_raw</span><span class="p">,</span> <span class="n">X_cols</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target_name</span> <span class="o">=</span> \
             <span class="n">validate_pandas_inputs</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">predictor_columns</span> <span class="o">=</span> <span class="n">X_raw</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_obs</span> <span class="o">=</span> <span class="n">X_raw</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
         <span class="kn">import</span> <span class="nn">math</span>
@@ -2327,13 +2341,13 @@ relationship of sets of two predictor variables with a target variable.        <
       
       
         
-        <a href="../fsca/" class="md-footer__link md-footer__link--next" aria-label="Next: FSCA" rel="next">
+        <a href="../../notebooks/bivariate_screener/" class="md-footer__link md-footer__link--next" aria-label="Next: Example" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              FSCA
+              Example
             </div>
           </div>
           <div class="md-footer__button md-icon">
