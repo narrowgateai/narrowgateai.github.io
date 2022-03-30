@@ -508,6 +508,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fsca/" class="md-nav__link">
+        Example
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2410,11 +2424,14 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="bivariatescreener-example">BivariateScreener Example<a class="anchor-link" href="#bivariatescreener-example">&#182;</a></h1><p>The <code>BivariateScreener</code> class from this package assists in screening for the interaction effects between two predictor variables and a target variable.</p>
+<h1 id="bivariatescreener-example">BivariateScreener Example<a class="anchor-link" href="#bivariatescreener-example">&#182;</a></h1><p>The <code>BivariateScreener</code> class screens for the interaction effects between two predictor variables and a target variable.</p>
 <p>Since the screening is performed with combinations of two variables, the total number of combinations screened given <code>n</code> predictor variables will be <code>n * (n-1) / 2</code><br>
 For this reason, the runtime for this screener is substantially longer than <code>UnivariateScreener</code></p>
-<p>Unlike <code>UnivariateScreener</code> only discretized information measures are supported.<br>
-However, like <code>UnivariateScreener</code>, only numerical values of both the predictor and target variables are supported.</p>
+<p>Items to note:</p>
+<ul>
+<li>Unlike <code>UnivariateScreener</code> <strong>only discretized</strong> information measures are supported</li>
+<li>Similar to <code>UnivariateScreener</code>, predictor and target variables must be numeric data types (not categorical).</li>
+</ul>
 <p>The same data pre-processing recommendations are also provided:</p>
 <ul>
 <li>For any categorical predictor variables, it is recommended to utilze the <code>Nominal2OrdinalEncoder</code> which will convert the categorical variables to numeric values. </li>
@@ -2439,6 +2456,7 @@ However, like <code>UnivariateScreener</code>, only numerical values of both the
 </ul>
 <p>Also, since there are 50 predictor variables, this will lead to 1,225 combinations of 2 variables.<br>
 In order to properly account for this, the number of Monte Carlo Permutation testing reps will need to increase to 1000 (or more)</p>
+<p>The preferred information criterion for use with this screener is <code>uncertainty_reduction</code>.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -2560,7 +2578,7 @@ In order to properly account for this, the number of Monte Carlo Permutation tes
     <span class="n">BivariateScreener</span><span class="p">(</span>
         <span class="n">nbins_predictors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
         <span class="n">nbins_target</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
-        <span class="n">information_criterion</span><span class="o">=</span><span class="s1">&#39;mutual_information&#39;</span><span class="p">,</span> 
+        <span class="n">information_criterion</span><span class="o">=</span><span class="s1">&#39;uncertainty_reduction&#39;</span><span class="p">,</span> 
         <span class="n">mcpt_type</span><span class="o">=</span><span class="s1">&#39;complete&#39;</span><span class="p">,</span>
         <span class="n">mcpt_reps</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 
@@ -2570,7 +2588,7 @@ In order to properly account for this, the number of Monte Carlo Permutation tes
     BivariateScreener(
         nbins_predictors=5, 
         nbins_target=5, 
-        information_criterion='mutual_information', 
+        information_criterion='uncertainty_reduction', 
         mcpt_type='complete',
         mcpt_reps=1000)
 
@@ -2596,7 +2614,7 @@ bi_screen.screen(X, y)</div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>PROCESSING 50 variables ... 
 TOTAL COLUMNS PROCESSED: 50
-- Processing time: 3.817590 s
+- Processing time: 3.968823 s
 TOTAL # OF 2-VARIABLE COMBINATIONS: 1225
 Begin MCPT reps ...
 </pre>
@@ -2674,7 +2692,7 @@ Number of MCPT reps: 1000
 Number of bins (predictors): 5
 Number of bins (target): 5
 MCPT permutation method: complete
-Information Criterion: Mutual Information
+Information Criterion: Uncertainty Reduction
 </pre>
 </div>
 </div>
@@ -2707,7 +2725,7 @@ Information Criterion: Mutual Information
       <th></th>
       <th>Variable 1</th>
       <th>Variable 2</th>
-      <th>Mutual Information</th>
+      <th>Uncertainty Reduction</th>
       <th>Solo p-value</th>
       <th>Unbiased p-value</th>
     </tr>

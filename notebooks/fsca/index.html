@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://narrowgateai.github.io/notebooks/univariate_screener/">
+        <link rel="canonical" href="https://narrowgateai.github.io/notebooks/fsca/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#univariatescreener-example" class="md-skip">
+        <a href="#fsca-examples" class="md-skip">
           Skip to content
         </a>
       
@@ -279,14 +279,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -321,100 +319,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Example
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../univariate_screener/" class="md-nav__link">
         Example
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example-1-discretized-screening-methods" class="md-nav__link">
-    Example 1 : Discretized Screening methods
-  </a>
-  
-    <nav class="md-nav" aria-label="Example 1 : Discretized Screening methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-synthetic-data" class="md-nav__link">
-    Generate Synthetic Data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#brief-explanation-of-results" class="md-nav__link">
-    Brief explanation of results
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-2-continuous-screening-methods" class="md-nav__link">
-    Example 2 : Continuous Screening methods
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-3-serially-correlated-variables" class="md-nav__link">
-    Example 3: Serially-correlated variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    Conclusion
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#needed" class="md-nav__link">
-    NEEDED
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -492,12 +401,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       
       
@@ -560,11 +471,101 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../fsca/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Example
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Example
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-of-components" class="md-nav__link">
+    Number of Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scikit-learn-compatability" class="md-nav__link">
+    Scikit-learn Compatability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-1-ordered-selection" class="md-nav__link">
+    Example 1: Ordered selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2-refined-selection" class="md-nav__link">
+    Example 2: Refined selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-3-fscaselector" class="md-nav__link">
+    Example 3: FSCASelector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-3-fscatransformer" class="md-nav__link">
+    Example 3: FSCATransformer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-4-variable-clustering" class="md-nav__link">
+    Example 4: Variable Clustering
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1384,56 +1385,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example-1-discretized-screening-methods" class="md-nav__link">
-    Example 1 : Discretized Screening methods
-  </a>
-  
-    <nav class="md-nav" aria-label="Example 1 : Discretized Screening methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-synthetic-data" class="md-nav__link">
-    Generate Synthetic Data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#brief-explanation-of-results" class="md-nav__link">
-    Brief explanation of results
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-2-continuous-screening-methods" class="md-nav__link">
-    Example 2 : Continuous Screening methods
+  <a href="#methods" class="md-nav__link">
+    Methods
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-3-serially-correlated-variables" class="md-nav__link">
-    Example 3: Serially-correlated variables
+  <a href="#number-of-components" class="md-nav__link">
+    Number of Components
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    Conclusion
+  <a href="#scikit-learn-compatability" class="md-nav__link">
+    Scikit-learn Compatability
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#needed" class="md-nav__link">
-    NEEDED
+  <a href="#example-1-ordered-selection" class="md-nav__link">
+    Example 1: Ordered selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2-refined-selection" class="md-nav__link">
+    Example 2: Refined selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-3-fscaselector" class="md-nav__link">
+    Example 3: FSCASelector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-3-fscatransformer" class="md-nav__link">
+    Example 3: FSCATransformer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-4-variable-clustering" class="md-nav__link">
+    Example 4: Variable Clustering
   </a>
   
 </li>
@@ -1450,7 +1452,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/narrowgateai/narrowgate/edit/master/docs/notebooks/univariate_screener.ipynb" title="Edit this page" class="md-content__button md-icon">
+<a href="https://github.com/narrowgateai/narrowgate/edit/master/docs/notebooks/fsca.ipynb" title="Edit this page" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
@@ -2520,48 +2522,58 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="univariatescreener-example">UnivariateScreener Example<a class="anchor-link" href="#univariatescreener-example">&#182;</a></h1><p>The <code>UnivariateScreener</code> class from this package assists in screening for relationships between individual predictor variables and a target variable.</p>
-<p>No interaction effects between predictor variables are taken into account.</p>
-<p>This screener produces results which are slightly different than the 'feature importance' methods available for predictive models (namely tree-based methods) as it only accounts for a predictor variable's direct relationship with a target variable. Still, often times, this screening method is sufficient for producing an initial round of filtering from a high-dimensional data set.</p>
-<p>This screening method, along with others present in this package, require that all data be numeric in nature (including the target variable).</p>
+<h1 id="fsca-examples">FSCA Examples<a class="anchor-link" href="#fsca-examples">&#182;</a></h1><p>FSCA stands for 'Forward Selection Component Analysis'.</p>
+<p>This algorithm is based on the following:</p>
 <ul>
-<li>For any categorical predictor variables, it is recommended to utilze the <code>Nominal2OrdinalEncoder</code> which will convert the categorical variables to numeric values. </li>
-<li>For a target variable with two values (binary classification), a conversion of target variable values to <code>0</code> and <code>1</code> is recommended. A discretized information measure is recommend (mutual information, uncertainty reduction, etc.) with the <code>nbins_target</code> parameter value set at <code>2</code></li>
-<li>For a multi-class target variable, a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html"><code>LabelEncoder</code></a> conversion is recommended along with a discretized information measure. The <code>nbins_target</code> parameter value shold be set to the number of classes present within the target variable. Please be aware the screener will potentially struggle to produce meaningful results with extremely high cardinal target variables also exhibiting a moderate amount of class imbalance.</li>
+<li>Find the smallest number of variables of all variables present in a data set which 'explain' as much of the total variability observed as possible. </li>
+<li>A variable is considered as doing a good job of explaining variability if it's value is able to inform us about the values of other variables in the data set.</li>
+<li>The best variable (or subset of variables) lets us best predict the values of the other variables.</li>
 </ul>
-<p>The following functionality will be demonstrated in this notebook :</p>
+<h3 id="methods">Methods<a class="anchor-link" href="#methods">&#182;</a></h3><p>The <code>FSCA</code> class offers three execution methods via the <code>method</code> parameter:</p>
 <ul>
-<li>Discretized screening methods</li>
-<li>Continuous screening methods</li>
-<li>'Complete' vs. 'Cyclic' permutation methods</li>
+<li><code>pca</code> - Traditional Prinicipal Component Analysis where all components are retained</li>
+<li><code>ordered</code> - Ordered FSCA where the greedy, strictly forward selection algorithm is used to select the variables</li>
+<li><code>refined</code> - Refined FSCA where all variables are re-evaluated for performance at each forward selection step and optimal variables are retained.</li>
 </ul>
-<p>As recommended in the documentation, for more detailed information on utilizing <code>UnivariateScreener</code>, please consult the following texts:</p>
+<p>The <code>refined</code> method is the preferred method over <code>ordered</code> as it:</p>
 <ul>
-<li><a href="https://www.amazon.com/gp/product/B078H79QGK/">Data Mining Algorithms in C++</a></li>
-<li><a href="http://www.timothymasters.info/varscreen.html">VarScreen User's manual</a></li>
+<li>allows for continual refinement of the set of selected variables</li>
+<li>tests the set of currently selected variables at each step</li>
+<li>removes any variables and replaces them with better performing candidate variables. </li>
 </ul>
-<p>DISCLAIMER: This library/repository is in no way affiliated with Dr. Masters and receives no renumeration.</p>
+<p>While the <code>refined</code> method sacrifices the strict ordering of the variables determined during the forward selection process, it produces a more optimal final subset of variables which is often preferred during feature selection activities.</p>
+<p>The <code>pca</code> method is present to allow for additional operations to take place on the features such as clustering. Clustering as implemented with this class 
+assists the user in determining highly collinear variables present in the data set.</p>
+<h3 id="number-of-components">Number of Components<a class="anchor-link" href="#number-of-components">&#182;</a></h3><p>The <code>FSCA</code> class also allows two methods for selecting the number of components/features:</p>
+<ul>
+<li>the user can manually select the number of components/features</li>
+<li>the number of components/features is automatically selected using either Horn's or Minka's method</li>
+</ul>
+<h3 id="scikit-learn-compatability">Scikit-learn Compatability<a class="anchor-link" href="#scikit-learn-compatability">&#182;</a></h3><p>In addition to the base <code>FSCA</code> class, <code>FSCASelector</code> and <code>FSCATransformer</code> classes extend the use of the base class for use within the <code>scikit-learn</code> ecosystem. Both extended classes are <code>Mixin</code> classes able to be leveraged within a scikit-learn <code>Pipeline</code> for either selecting a subset of variables or transforming the data set into it's subset of principal components determined during the forward selection/refinement process.</p>
+<p>This class truly offers a unique perspective on feature selection.<br>
+At no time is a target variable used in the selection process.<br>
+The driving princple behind feature selection within <code>FSCA</code> is to maximize the explained variance of the entire dataset with a subset of the fewest number of variables. Therefore, the major caveat with <code>FSCA</code> is that there is no guarantee that the selected subset of variables (or transformed components) will, in any way, be related to the target variable.</p>
+<p>Please consult the following references for more information about the algorithm and it's potential uses:</p>
+<ul>
+<li><a href="https://www.amazon.com/gp/product/B089R5SYVS/">Modern Data Mining Algorithms in C++ and CUDA C</a></li>
+<li><a href="https://doi.org/10.1109/TPAMI.2017.2648792">Forward Selection Component Analysis: Algorithms and Applications</a></li>
+<li><a href="http://www.timothymasters.info/varscreen.html">VarScreen user's guide</a></li>
+</ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="example-1-discretized-screening-methods">Example 1 : Discretized Screening methods<a class="anchor-link" href="#example-1-discretized-screening-methods">&#182;</a></h3><p>As mentioned above, this class only supports numeric data as inputs ... with both the predictor and target variables.</p>
-<p>While it is often advised to NOT discretize continuous variables during predictive modeling due to potential information loss, discretization of continuous variables is used extensively with this screener as a method for detecting non-linear relationships between predictor and target variables. The number of bins does not have to be large in order to detect this relationship. Often times, just 3 to 5 bins is sufficient.</p>
-<p>Strictly using correlation as a tool for assessing a relationship between continuous predictor and target variable may eliminate some variables from consideration due to it's inability to properly assess non-linear relationships. For an example of this inability please see <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe's quartet</a>. On the other hand, such variables with non-linear relationships are exactly those variables which we desire to retain and use in powerful predictive models whose algorithms have the ability to take advantage of such relationships during model construction time.</p>
-<p>A simple example given in the above-referenced texts is replicated here using the synthetic data-generating function [<code>generate_masters_sample_regression_data</code>] present within the package. This synthetic data set, generates 6 variables which are informationally-related to the target variable. 2 of those 6 variables are combinations of the other 4 variables.</p>
-<p>Therefore, we should see the following:</p>
+<h2 id="example-1-ordered-selection">Example 1: Ordered selection<a class="anchor-link" href="#example-1-ordered-selection">&#182;</a></h2><p>The data set being examined will be generated by the <code>make_masters_sample_regression_data</code> function.<br>
+The target variable generated, <code>y</code> will be added into the data set for demonstration purposes.<br>
+A total of 9 variables will be present in the data set with variables with the following characteristics:</p>
 <ul>
-<li>2 variables strongly related to the target variable</li>
-<li>4 variables moderately related to the target variable</li>
-<li>remaining variables with a random relationship with the target variable</li>
+<li><code>target = x_0 + x_1</code></li>
+<li><code>x_0 = x_2 + x_3</code></li>
+<li><code>x_1 = x_4 + x_5</code></li>
+<li>all other variables are random</li>
 </ul>
 
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="generate-synthetic-data">Generate Synthetic Data<a class="anchor-link" href="#generate-synthetic-data">&#182;</a></h4>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -2582,9 +2594,13 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">narrowgate.utils.test</span> <span class="kn">import</span> <span class="n">make_masters_sample_regression_data</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">narrowgate.utils.test</span> <span class="kn">import</span> <span class="n">make_masters_sample_regression_data</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">from narrowgate.utils.test import make_masters_sample_regression_data</div>
+<div id="cell-2" class="clipboard-copy-txt">import pandas as pd
+
+from narrowgate.utils.test import make_masters_sample_regression_data</div>
     
         </div>
     </div>
@@ -2615,12 +2631,12 @@ Licensed under the Apache License, Version 2.0.
             <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> \
     <span class="n">make_masters_sample_regression_data</span><span class="p">(</span>
         <span class="n">n_obs</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span>
-        <span class="n">n_cols</span> <span class="o">=</span> <span class="mi">50</span><span class="p">)</span>
+        <span class="n">n_cols</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span>
 </pre></div>
 <div id="cell-3" class="clipboard-copy-txt">X, y = \
     make_masters_sample_regression_data(
         n_obs = 10000,
-        n_cols = 50)</div>
+        n_cols = 8)</div>
     
         </div>
     </div>
@@ -2648,9 +2664,9 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">narrowgate.screeners</span> <span class="kn">import</span> <span class="n">UnivariateScreener</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt">from narrowgate.screeners import UnivariateScreener</div>
+<div id="cell-4" class="clipboard-copy-txt">X = pd.concat([X,y], axis=1)</div>
     
         </div>
     </div>
@@ -2678,25 +2694,9 @@ Licensed under the Apache License, Version 2.0.
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">uni_screen</span> <span class="o">=</span> \
-    <span class="n">UnivariateScreener</span><span class="p">(</span>
-        <span class="n">nbins_predictors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
-        <span class="n">nbins_target</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
-        <span class="n">information_criterion</span><span class="o">=</span><span class="s1">&#39;mutual_information&#39;</span><span class="p">,</span> 
-        <span class="n">mcpt_reps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
-        <span class="n">cscv_subsets</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-
-<span class="n">uni_screen</span><span class="o">.</span><span class="n">screen</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
-<div id="cell-5" class="clipboard-copy-txt">uni_screen = \
-    UnivariateScreener(
-        nbins_predictors=5, 
-        nbins_target=5, 
-        information_criterion='mutual_information', 
-        mcpt_reps=100, 
-        cscv_subsets=6)
-
-uni_screen.screen(X, y)</div>
+<div id="cell-5" class="clipboard-copy-txt">X.head()</div>
     
         </div>
     </div>
@@ -2708,143 +2708,11 @@ uni_screen.screen(X, y)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>PROCESSING 50 variables ... 
-TOTAL COLUMNS PROCESSED: 50
-- Processing time: 3.911739 s
-Begin MCPT reps ...
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>  0%|          | 0/100 [00:00&lt;?, ?it/s]</pre>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Begin CSCV reps ...
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>  0%|          | 0/20 [00:00&lt;?, ?it/s]</pre>
-</div>
-
-</div>
 
 <div class="jp-OutputArea-child">
 
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;narrowgate.screeners.univariate.base.UnivariateScreener at 0x7f51f165b1c0&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-6">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">uni_screen_results</span> <span class="o">=</span> <span class="n">uni_screen</span><span class="o">.</span><span class="n">results</span>
-<span class="n">uni_screen_results</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-<div id="cell-6" class="clipboard-copy-txt">uni_screen_results = uni_screen.results
-uni_screen_results.head(10)</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>UNIVARIATE SCREENER RESULTS
----------------------------
-Number of observations: 10000
-Number of predictors: 50
-Target variable name: target
-Number of MCPT reps: 100
-Number of CSCV subsets: 6
-Number of bins (predictors): 5
-Number of bins (target): 5
-MCPT permutation method: complete
-Information Criterion: Mutual Information
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -2867,93 +2735,77 @@ Information Criterion: Mutual Information
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Variable</th>
-      <th>mutual_information</th>
-      <th>Solo p-value</th>
-      <th>Unbiased p-value</th>
-      <th>P(&lt;=median)</th>
+      <th>x_0</th>
+      <th>x_1</th>
+      <th>x_2</th>
+      <th>x_3</th>
+      <th>x_4</th>
+      <th>x_5</th>
+      <th>x_6</th>
+      <th>x_7</th>
+      <th>target</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>x_1</td>
-      <td>0.2817</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
+      <td>0.700071</td>
+      <td>1.658846</td>
+      <td>0.377136</td>
+      <td>0.322935</td>
+      <td>0.686614</td>
+      <td>0.972232</td>
+      <td>0.966830</td>
+      <td>0.671298</td>
+      <td>2.358917</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>x_0</td>
-      <td>0.2595</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
+      <td>0.859634</td>
+      <td>1.514251</td>
+      <td>0.317078</td>
+      <td>0.542556</td>
+      <td>0.601223</td>
+      <td>0.913027</td>
+      <td>0.408457</td>
+      <td>0.550916</td>
+      <td>2.373884</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>x_4</td>
-      <td>0.1242</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
+      <td>0.273725</td>
+      <td>1.512612</td>
+      <td>0.040542</td>
+      <td>0.233183</td>
+      <td>0.607784</td>
+      <td>0.904828</td>
+      <td>0.008684</td>
+      <td>0.459207</td>
+      <td>1.786337</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>x_5</td>
-      <td>0.1234</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
+      <td>0.227864</td>
+      <td>0.476151</td>
+      <td>0.161198</td>
+      <td>0.066666</td>
+      <td>0.149306</td>
+      <td>0.326845</td>
+      <td>0.365441</td>
+      <td>0.591441</td>
+      <td>0.704014</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>x_2</td>
-      <td>0.1134</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>x_3</td>
-      <td>0.1099</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>x_6</td>
-      <td>0.0013</td>
-      <td>0.06</td>
-      <td>0.98</td>
-      <td>0.35</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>x_46</td>
-      <td>0.0012</td>
-      <td>0.14</td>
-      <td>1.00</td>
-      <td>0.25</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>x_8</td>
-      <td>0.0011</td>
-      <td>0.16</td>
-      <td>1.00</td>
-      <td>0.35</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>x_45</td>
-      <td>0.0011</td>
-      <td>0.15</td>
-      <td>1.00</td>
-      <td>0.35</td>
+      <td>1.199534</td>
+      <td>1.418188</td>
+      <td>0.663864</td>
+      <td>0.535670</td>
+      <td>0.987275</td>
+      <td>0.430913</td>
+      <td>0.298618</td>
+      <td>0.748917</td>
+      <td>2.617722</td>
     </tr>
   </tbody>
 </table>
@@ -2970,63 +2822,41 @@ Information Criterion: Mutual Information
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The results above are exactly what we would have expected.</p>
-<p><code>x_0</code> and <code>x_1</code> are the two variables derived from variables <code>x_2</code> through <code>x_5</code> and are more strongly related to the target.</p>
-<p><code>x_6</code> and greater are purely random and have no relationship with the target whatsoever.</p>
+<p>Run the <code>FSCA</code> algorithm using the <code>ordered</code> method</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-6">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">narrowgate.screeners</span> <span class="kn">import</span> <span class="n">FSCA</span>
+</pre></div>
+<div id="cell-6" class="clipboard-copy-txt">from narrowgate.screeners import FSCA</div>
+    
+        </div>
+    </div>
 
 </div>
 </div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="brief-explanation-of-results">Brief explanation of results<a class="anchor-link" href="#brief-explanation-of-results">&#182;</a></h4>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Once again, at risk of sounding like a broken record, the practitioner is strongly encouraged to consult the referenced texts by Timothy Masters for a more detailed review of the results metrics.</p>
-<p>However, the following information is freely available from the <a href="http://www.timothymasters.info/varscreen.html">VarScreen user's manual</a> and summarized here for convenience.</p>
-<p>The <code>results</code> DataFrame consists of the following:</p>
-<ul>
-<li><p><code>Variable</code></p>
-<ul>
-<li>the name of the predictor variable  </li>
-</ul>
-</li>
-<li><p><code>Solo p-value</code></p>
-<ul>
-<li>the probability that a predictor variable having a strictly random relationship with the target could have had an information score at least as high as one obtained by sheer luck.  </li>
-</ul>
-</li>
-<li><p><code>Unbiased p-value</code></p>
-<ul>
-<li>the probability that the best performing predictor variable could have attained its superior level of performance by sheer luck if all candidates were truly worthless.  </li>
-<li>This value is an upper bound for the true unbiased p-value of the candidate, and a very small value is an indication that the predictor variable has true predictive power.  </li>
-</ul>
-</li>
-<li><p><code>P(&lt;=median)</code></p>
-<ul>
-<li>an estimation of superior quality of a predictor variable relative to other predictor variables present in the data set. <strong>measures relative power of predictor variables to one another, not absolute power</strong>  </li>
-<li>only meaningful if the set of predictor variables being evaluated are known to have a non-random relationship to the target variable.  </li>
-<li>the estimated probability (via cross-validation) that the out-of-sample information value of the best predictor variable will be less than or equal to the median out-of-sample performance of all other predictor variables.   </li>
-<li>This value is controlled via the <code>cscv_subsets</code> parameter and refers to the number of folds to use in Combinatorially Symmetric Cross Validation. For more information about this method, please refer to the linked texts above.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Unbiased p-value Alert</strong><br>
-Because the calculation of this value is overly conservative, large values at the bottom of the list may actually be useful predictors and may have obtained these large values due to the over-estimation of the true p-value. A more rigid and accurate stepwise method has been implemented by Masters within VarScreen but has not been implmented here as it requires the practitioner to provide a predefined p-value (alpha) at runtime.</p>
 
 </div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="example-2-continuous-screening-methods">Example 2 : Continuous Screening methods<a class="anchor-link" href="#example-2-continuous-screening-methods">&#182;</a></h3><p>The same data set used in the previous example will be used again in the call to demonstrate screening using a continuous information measure.</p>
-<p>The screening metric being used will be Spearman's rank correlation. Because the data set is known to not have any non-linearities present between the predictor and target variables, the results should be relatively the same as in the discretized example.</p>
-<p>Note that the parameters <code>nbins_predictors</code> and <code>nbins_target</code> are both set to <code>None</code> in order to invoke the rank correlation calculation.<br>
-In addition, the <code>information_criterion</code> parameter must be changed as well.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -3044,108 +2874,14 @@ In addition, the <code>information_criterion</code> parameter must be changed as
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">uni_screen_continuous</span> <span class="o">=</span> \
-    <span class="n">UnivariateScreener</span><span class="p">(</span>
-        <span class="n">nbins_predictors</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
-        <span class="n">nbins_target</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
-        <span class="n">information_criterion</span><span class="o">=</span><span class="s1">&#39;spearman_rho&#39;</span><span class="p">,</span> 
-        <span class="n">mcpt_reps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
-        <span class="n">cscv_subsets</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-
-<span class="n">uni_screen_continuous</span><span class="o">.</span><span class="n">screen</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_ordered</span> <span class="o">=</span> <span class="n">FSCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;ordered&#39;</span><span class="p">,</span> <span class="n">standardize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
-<div id="cell-7" class="clipboard-copy-txt">uni_screen_continuous = \
-    UnivariateScreener(
-        nbins_predictors=None, 
-        nbins_target=None, 
-        information_criterion='spearman_rho', 
-        mcpt_reps=100, 
-        cscv_subsets=6)
-
-uni_screen_continuous.screen(X, y)</div>
+<div id="cell-7" class="clipboard-copy-txt">fsca_ordered = FSCA(n_components = len(X.columns), method='ordered', standardize=True)</div>
     
         </div>
     </div>
 
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>PROCESSING 50 variables ... 
-TOTAL COLUMNS PROCESSED: 50
-- Processing time: 0.000716 s
-Begin MCPT reps ...
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>  0%|          | 0/100 [00:00&lt;?, ?it/s]</pre>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Begin CSCV reps ...
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>  0%|          | 0/20 [00:00&lt;?, ?it/s]</pre>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;narrowgate.screeners.univariate.base.UnivariateScreener at 0x7f51e59de7f0&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -3168,11 +2904,9 @@ Begin MCPT reps ...
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">uni_screen_continuous_results</span> <span class="o">=</span> <span class="n">uni_screen_continuous</span><span class="o">.</span><span class="n">results</span>
-<span class="n">uni_screen_continuous_results</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_ordered</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
-<div id="cell-8" class="clipboard-copy-txt">uni_screen_continuous_results = uni_screen_continuous.results
-uni_screen_continuous_results.head(10)</div>
+<div id="cell-8" class="clipboard-copy-txt">fsca_ordered.fit(X)</div>
     
         </div>
     </div>
@@ -3192,15 +2926,12 @@ uni_screen_continuous_results.head(10)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>UNIVARIATE SCREENER RESULTS
----------------------------
-Number of observations: 10000
-Number of predictors: 50
-Target variable name: target
-Number of MCPT reps: 100
-Number of CSCV subsets: 6
-MCPT permutation method: complete
-Information Criterion: Spearman Rho
+<pre>Commencing stepwise construction with target
+ - Added x_0 for criterion=4.98918936245303
+ - Added x_4 for criterion=5.99914441359842
+ - Added x_2 for criterion=7.000178841459978
+ - Added x_7 for criterion=8.000191632059934
+ - Added x_6 for criterion=8.999995312303337
 </pre>
 </div>
 </div>
@@ -3212,116 +2943,9 @@ Information Criterion: Spearman Rho
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Variable</th>
-      <th>spearman_rho</th>
-      <th>Solo p-value</th>
-      <th>Unbiased p-value</th>
-      <th>P(&lt;=median)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>x_1</td>
-      <td>0.6955</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>x_0</td>
-      <td>0.6823</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>x_4</td>
-      <td>0.4955</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>x_5</td>
-      <td>0.4931</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>x_2</td>
-      <td>0.4779</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>x_3</td>
-      <td>0.4738</td>
-      <td>0.01</td>
-      <td>0.01</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>x_26</td>
-      <td>0.0222</td>
-      <td>0.03</td>
-      <td>0.45</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>x_44</td>
-      <td>0.0169</td>
-      <td>0.03</td>
-      <td>0.92</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>x_31</td>
-      <td>0.0158</td>
-      <td>0.06</td>
-      <td>0.97</td>
-      <td>0.25</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>x_38</td>
-      <td>0.0129</td>
-      <td>0.10</td>
-      <td>1.00</td>
-      <td>0.30</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>FSCA(n_components=6)</pre>
 </div>
 
 </div>
@@ -3334,23 +2958,18 @@ Information Criterion: Spearman Rho
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Sure enough the top variables are appearing in the same order.</p>
+<p>Three are several class objects that are available for examination upon completion:</p>
+<ul>
+<li><code>n_unique_eigval</code> - Number of unique (non-redundant) sources of variation in the data set</li>
+<li><code>eigvals[:n_unique_eigval]</code> - Eigenvalues</li>
+<li><code>eigval_cum[:n_unique_eigval]</code> - Cumulative eigenvalue percent</li>
+<li><code>pc_factors</code> - Principal component factor structure</li>
+<li><code>kept_column_names</code> - the subset of variables selected</li>
+</ul>
 
 </div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="example-3-serially-correlated-variables">Example 3: Serially-correlated variables<a class="anchor-link" href="#example-3-serially-correlated-variables">&#182;</a></h3><p>In this example, a new data set of several serially correlated variables are going to be created.</p>
-<p>A rolling 10-period average is going to be calculated from random variables, <code>x_6</code> to <code>x_15</code>. 
-These original variables have no relation with one another.<br>
-The new variables are only associated by the length of the moving average window.</p>
-<p>The newly derived <code>x_6</code> is then going to be removed and used as the target variable while the other serially-correlated random variables will be used as predictor variables.</p>
-<p>If serial correlation exists in either the predictor or target variables and <code>complete</code> is chosen for <code>mcpt_type</code> parameter, the screener may detect relationships with the predictor variables even though none exist.</p>
-<p>Therefore, be very careful to choose <code>cyclic</code> as the <code>mcpt_type</code> if even a hint of serial correlation may be present within any variables being examined.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
@@ -3368,37 +2987,11 @@ The new variables are only associated by the length of the moving average window
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Create a new data set with serial correlation </span>
-<span class="c1"># Use random variables with no relationship with one another</span>
-<span class="c1"># Create serially correlated variables by calculating a rolling average of the series.</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">dep_list</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">icol</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">16</span><span class="p">):</span>
-    <span class="n">col</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;x_</span><span class="si">{</span><span class="n">icol</span><span class="si">}</span><span class="s1">&#39;</span>
-    <span class="n">dep_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-    
-<span class="n">X_dep</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">dep_list</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">y_dep</span> <span class="o">=</span> <span class="n">X_dep</span><span class="p">[</span><span class="s1">&#39;x_6&#39;</span><span class="p">]</span>
-<span class="n">X_dep</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;x_6&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Number of unique (non-redundant) sources of variation in the data set</span>
+<span class="n">fsca_ordered</span><span class="o">.</span><span class="n">n_unique_eigval</span>
 </pre></div>
-<div id="cell-9" class="clipboard-copy-txt"># Create a new data set with serial correlation 
-# Use random variables with no relationship with one another
-# Create serially correlated variables by calculating a rolling average of the series.
-import pandas as pd
-
-dep_list = []
-
-for icol in range(6,16):
-    col = f'x_{icol}'
-    dep_list.append(X[col].rolling(10, min_periods=1).mean())
-    
-X_dep = pd.concat(dep_list, axis=1)
-
-y_dep = X_dep['x_6']
-X_dep.drop(columns='x_6', inplace=True)</div>
+<div id="cell-9" class="clipboard-copy-txt"># Number of unique (non-redundant) sources of variation in the data set
+fsca_ordered.n_unique_eigval</div>
     
         </div>
     </div>
@@ -3406,19 +2999,42 @@ X_dep.drop(columns='x_6', inplace=True)</div>
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Perform a univariate screening with the serially-correlated data.</p>
-<p><code>complete</code> is selected as <code>mcpt_type</code></p>
+<p>Even though there are 9 variables, 3 of the variables are combinations of the other variables.<br>
+Therefore, 6 unique sources of variation in the data is reasonable.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3433,27 +3049,11 @@ X_dep.drop(columns='x_6', inplace=True)</div>
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">uni_screen_complete</span> <span class="o">=</span> \
-    <span class="n">UnivariateScreener</span><span class="p">(</span>
-        <span class="n">nbins_predictors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
-        <span class="n">nbins_target</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
-        <span class="n">information_criterion</span><span class="o">=</span><span class="s1">&#39;mutual_information&#39;</span><span class="p">,</span> 
-        <span class="n">mcpt_type</span> <span class="o">=</span> <span class="s1">&#39;complete&#39;</span><span class="p">,</span>
-        <span class="n">mcpt_reps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
-        <span class="n">cscv_subsets</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-
-<span class="n">uni_screen_complete</span><span class="o">.</span><span class="n">screen</span><span class="p">(</span><span class="n">X_dep</span><span class="p">,</span> <span class="n">y_dep</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Eigenvalues</span>
+<span class="n">fsca_ordered</span><span class="o">.</span><span class="n">eigvals</span><span class="p">[:</span><span class="n">fsca_ordered</span><span class="o">.</span><span class="n">n_unique_eigval</span><span class="p">]</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">uni_screen_complete = \
-    UnivariateScreener(
-        nbins_predictors=5, 
-        nbins_target=5, 
-        information_criterion='mutual_information', 
-        mcpt_type = 'complete',
-        mcpt_reps=100, 
-        cscv_subsets=8)
-
-uni_screen_complete.screen(X_dep, y_dep)</div>
+<div id="cell-10" class="clipboard-copy-txt"># Eigenvalues
+fsca_ordered.eigvals[:fsca_ordered.n_unique_eigval]</div>
     
         </div>
     </div>
@@ -3469,68 +3069,14 @@ uni_screen_complete.screen(X_dep, y_dep)</div>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>PROCESSING 9 variables ... 
-TOTAL COLUMNS PROCESSED: 9
-- Processing time: 0.007171 s
-Begin MCPT reps ...
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>  0%|          | 0/100 [00:00&lt;?, ?it/s]</pre>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Begin CSCV reps ...
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>  0%|          | 0/70 [00:00&lt;?, ?it/s]</pre>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;narrowgate.screeners.univariate.base.UnivariateScreener at 0x7f51e5a78370&gt;</pre>
+<pre>array([2.99337567, 1.99597909, 1.02028378, 1.0093568 , 0.99856091,
+       0.98243907])</pre>
 </div>
 
 </div>
@@ -3544,7 +3090,7 @@ Begin MCPT reps ...
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
@@ -3559,11 +3105,11 @@ Begin MCPT reps ...
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">uni_screen_complete_results</span> <span class="o">=</span> <span class="n">uni_screen_complete</span><span class="o">.</span><span class="n">results</span>
-<span class="n">uni_screen_complete_results</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Cumulative eigenvalue percent</span>
+<span class="n">fsca_ordered</span><span class="o">.</span><span class="n">eigval_cum</span><span class="p">[:</span><span class="n">fsca_ordered</span><span class="o">.</span><span class="n">n_unique_eigval</span><span class="p">]</span>
 </pre></div>
-<div id="cell-11" class="clipboard-copy-txt">uni_screen_complete_results = uni_screen_complete.results
-uni_screen_complete_results</div>
+<div id="cell-11" class="clipboard-copy-txt"># Cumulative eigenvalue percent
+fsca_ordered.eigval_cum[:fsca_ordered.n_unique_eigval]</div>
     
         </div>
     </div>
@@ -3575,262 +3121,6 @@ uni_screen_complete_results</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>UNIVARIATE SCREENER RESULTS
----------------------------
-Number of observations: 10000
-Number of predictors: 9
-Target variable name: x_6
-Number of MCPT reps: 100
-Number of CSCV subsets: 8
-Number of bins (predictors): 5
-Number of bins (target): 5
-MCPT permutation method: complete
-Information Criterion: Mutual Information
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Variable</th>
-      <th>mutual_information</th>
-      <th>Solo p-value</th>
-      <th>Unbiased p-value</th>
-      <th>P(&lt;=median)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>x_11</td>
-      <td>0.0020</td>
-      <td>0.02</td>
-      <td>0.04</td>
-      <td>0.371429</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>x_8</td>
-      <td>0.0017</td>
-      <td>0.02</td>
-      <td>0.06</td>
-      <td>0.442857</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>x_13</td>
-      <td>0.0015</td>
-      <td>0.02</td>
-      <td>0.17</td>
-      <td>0.371429</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>x_7</td>
-      <td>0.0014</td>
-      <td>0.03</td>
-      <td>0.25</td>
-      <td>0.400000</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>x_12</td>
-      <td>0.0013</td>
-      <td>0.03</td>
-      <td>0.30</td>
-      <td>0.571429</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>x_9</td>
-      <td>0.0012</td>
-      <td>0.12</td>
-      <td>0.59</td>
-      <td>0.514286</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>x_15</td>
-      <td>0.0011</td>
-      <td>0.14</td>
-      <td>0.73</td>
-      <td>0.442857</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>x_10</td>
-      <td>0.0010</td>
-      <td>0.23</td>
-      <td>0.90</td>
-      <td>0.585714</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>x_14</td>
-      <td>0.0009</td>
-      <td>0.40</td>
-      <td>0.96</td>
-      <td>0.671429</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Notice the low mutual information values but also the low solo p-value and unbiased p-values as well.</p>
-<p>By not accounting for the serial correlation using <code>cyclic</code> as the <code>mcpt_type</code>, the screener has detected relationships between predictor and target variables when, in fact, there is none.<br>
-The only relationship is the window length of the serial correlation.</p>
-<p>Re-run the same screener but use <code>cyclic</code> instead.</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-        <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-12">
-            <div>
-                <span class="notice" hidden>Copied!</span>
-                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                </svg>
-                </div>
-            </clipboard-copy>
-        </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">uni_screen_cyclic</span> <span class="o">=</span> \
-    <span class="n">UnivariateScreener</span><span class="p">(</span>
-        <span class="n">nbins_predictors</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
-        <span class="n">nbins_target</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
-        <span class="n">information_criterion</span><span class="o">=</span><span class="s1">&#39;mutual_information&#39;</span><span class="p">,</span> 
-        <span class="n">mcpt_type</span><span class="o">=</span><span class="s1">&#39;cyclic&#39;</span><span class="p">,</span>
-        <span class="n">mcpt_reps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
-        <span class="n">cscv_subsets</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-
-<span class="n">uni_screen_cyclic</span><span class="o">.</span><span class="n">screen</span><span class="p">(</span><span class="n">X_dep</span><span class="p">,</span> <span class="n">y_dep</span><span class="p">)</span>
-</pre></div>
-<div id="cell-12" class="clipboard-copy-txt">uni_screen_cyclic = \
-    UnivariateScreener(
-        nbins_predictors=5, 
-        nbins_target=5, 
-        information_criterion='mutual_information', 
-        mcpt_type='cyclic',
-        mcpt_reps=100, 
-        cscv_subsets=8)
-
-uni_screen_cyclic.screen(X_dep, y_dep)</div>
-    
-        </div>
-    </div>
-
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>PROCESSING 9 variables ... 
-TOTAL COLUMNS PROCESSED: 9
-- Processing time: 0.006906 s
-Begin MCPT reps ...
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>  0%|          | 0/100 [00:00&lt;?, ?it/s]</pre>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Begin CSCV reps ...
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>  0%|          | 0/70 [00:00&lt;?, ?it/s]</pre>
-</div>
-
-</div>
 
 <div class="jp-OutputArea-child">
 
@@ -3841,7 +3131,8 @@ Begin MCPT reps ...
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;narrowgate.screeners.univariate.base.UnivariateScreener at 0x7f51e5a78040&gt;</pre>
+<pre>array([ 33.25974694,  55.43730394,  66.77379628,  77.98887767,
+        89.08400469, 100.        ])</pre>
 </div>
 
 </div>
@@ -3860,7 +3151,7 @@ Begin MCPT reps ...
         
         <div class="CodeMirror cm-s-jupyter">
         <div class="zeroclipboard-container">
-            <clipboard-copy for="cell-13">
+            <clipboard-copy for="cell-12">
             <div>
                 <span class="notice" hidden>Copied!</span>
                 <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3870,11 +3161,9 @@ Begin MCPT reps ...
                 </div>
             </clipboard-copy>
         </div>
-            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">uni_screen_cyclic_results</span> <span class="o">=</span> <span class="n">uni_screen_cyclic</span><span class="o">.</span><span class="n">results</span>
-<span class="n">uni_screen_cyclic_results</span>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_ordered</span><span class="o">.</span><span class="n">pc_factors</span>
 </pre></div>
-<div id="cell-13" class="clipboard-copy-txt">uni_screen_cyclic_results = uni_screen_cyclic.results
-uni_screen_cyclic_results</div>
+<div id="cell-12" class="clipboard-copy-txt">fsca_ordered.pc_factors</div>
     
         </div>
     </div>
@@ -3886,28 +3175,6 @@ uni_screen_cyclic_results</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>UNIVARIATE SCREENER RESULTS
----------------------------
-Number of observations: 10000
-Number of predictors: 9
-Target variable name: x_6
-Number of MCPT reps: 100
-Number of CSCV subsets: 8
-Number of bins (predictors): 5
-Number of bins (target): 5
-MCPT permutation method: cyclic
-Information Criterion: Mutual Information
-</pre>
-</div>
-</div>
 
 <div class="jp-OutputArea-child">
 
@@ -3935,85 +3202,95 @@ Information Criterion: Mutual Information
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Variable</th>
-      <th>mutual_information</th>
-      <th>Solo p-value</th>
-      <th>Unbiased p-value</th>
-      <th>P(&lt;=median)</th>
+      <th>PC0</th>
+      <th>PC1</th>
+      <th>PC2</th>
+      <th>PC3</th>
+      <th>PC4</th>
+      <th>PC5</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>x_11</td>
-      <td>0.0020</td>
-      <td>0.21</td>
-      <td>0.90</td>
-      <td>0.371429</td>
+      <th>x_0</th>
+      <td>0.712142</td>
+      <td>-0.701995</td>
+      <td>-0.000938</td>
+      <td>0.000648</td>
+      <td>0.003236</td>
+      <td>0.006724</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>x_8</td>
-      <td>0.0017</td>
-      <td>0.38</td>
-      <td>0.97</td>
-      <td>0.442857</td>
+      <th>x_1</th>
+      <td>0.701550</td>
+      <td>0.712562</td>
+      <td>0.004637</td>
+      <td>0.001532</td>
+      <td>0.002461</td>
+      <td>-0.007246</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>x_13</td>
-      <td>0.0015</td>
-      <td>0.38</td>
-      <td>0.99</td>
-      <td>0.371429</td>
+      <th>x_2</th>
+      <td>0.510745</td>
+      <td>-0.483860</td>
+      <td>-0.434364</td>
+      <td>-0.043885</td>
+      <td>-0.374712</td>
+      <td>0.417144</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>x_7</td>
-      <td>0.0014</td>
-      <td>0.48</td>
-      <td>1.00</td>
-      <td>0.400000</td>
+      <th>x_3</th>
+      <td>0.495778</td>
+      <td>-0.508249</td>
+      <td>0.431446</td>
+      <td>0.044638</td>
+      <td>0.377902</td>
+      <td>-0.406127</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>x_12</td>
-      <td>0.0013</td>
-      <td>0.48</td>
-      <td>1.00</td>
-      <td>0.571429</td>
+      <th>x_4</th>
+      <td>0.495195</td>
+      <td>0.503246</td>
+      <td>-0.532730</td>
+      <td>-0.154526</td>
+      <td>0.377959</td>
+      <td>-0.225814</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>x_9</td>
-      <td>0.0012</td>
-      <td>0.64</td>
-      <td>1.00</td>
-      <td>0.514286</td>
+      <th>x_5</th>
+      <td>0.492077</td>
+      <td>0.499521</td>
+      <td>0.542586</td>
+      <td>0.157649</td>
+      <td>-0.376833</td>
+      <td>0.216988</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>x_15</td>
-      <td>0.0011</td>
-      <td>0.66</td>
-      <td>1.00</td>
-      <td>0.442857</td>
+      <th>x_6</th>
+      <td>-0.003232</td>
+      <td>0.010372</td>
+      <td>0.255255</td>
+      <td>-0.682598</td>
+      <td>0.405534</td>
+      <td>0.551659</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>x_10</td>
-      <td>0.0010</td>
-      <td>0.71</td>
-      <td>1.00</td>
-      <td>0.585714</td>
+      <th>x_7</th>
+      <td>-0.008642</td>
+      <td>0.009858</td>
+      <td>-0.045613</td>
+      <td>0.700544</td>
+      <td>0.515746</td>
+      <td>0.490906</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>x_14</td>
-      <td>0.0009</td>
-      <td>0.85</td>
-      <td>1.00</td>
-      <td>0.671429</td>
+      <th>target</th>
+      <td>0.999978</td>
+      <td>0.004241</td>
+      <td>0.002604</td>
+      <td>0.001540</td>
+      <td>0.004032</td>
+      <td>-0.000338</td>
     </tr>
   </tbody>
 </table>
@@ -4030,21 +3307,1449 @@ Information Criterion: Mutual Information
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This is much better.</p>
-<p>While some of the variables still have somewhat low solo p-values, all of the unbiased p-values are quite high, therefore indicating no predictive power among the predictor variables.</p>
+<p>The following interpretations can be made given the previous three cells:</p>
+<ul>
+<li>The first eigenvector/component (PC0) accounts for over 33% of the total variance in the data set (<code>eigval_cum[0]</code>)</li>
+<li>The first eigenvector/component (PC0) is very highly correlated with the target variable. </li>
+<li>The second eigenvector/component (PC1) is just the contrast between<code>x_0</code> and <code>x_1</code> and their 'constituent' variables. These two variables comprise the target variable</li>
+<li>Together, the first 2 components comprise over 55% of the total variance in the data set (<code>eigval_cum[1]</code>)</li>
+</ul>
+<p>The mean squared correlations of each variable with one another are also calculated during the <code>fit</code></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-13">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_ordered</span><span class="o">.</span><span class="n">corr</span>
+</pre></div>
+<div id="cell-13" class="clipboard-copy-txt">fsca_ordered.corr</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>x_0       0.187718
+x_1       0.185849
+x_2       0.094220
+x_3       0.093492
+x_4       0.093241
+x_5       0.092046
+x_6       0.000029
+x_7       0.000033
+target    0.249163
+Name: mean_sq_corr, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-14">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_ordered</span><span class="o">.</span><span class="n">kept_column_names</span>
+</pre></div>
+<div id="cell-14" class="clipboard-copy-txt">fsca_ordered.kept_column_names</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;target&#39;, &#39;x_0&#39;, &#39;x_4&#39;, &#39;x_2&#39;, &#39;x_7&#39;, &#39;x_6&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="conclusion">Conclusion<a class="anchor-link" href="#conclusion">&#182;</a></h3><p>The <code>UnivariateScreener</code> is an excellent first-use tool for exploratory data analysis.</p>
-<p>Monte Carlo Permutation testing helps assess robust of predictor variables.</p>
+<p>These column names correspond to the results present in the VarScreen user guide example:</p>
+<ul>
+<li><code>target</code> is selected</li>
+<li>one of the two variables which comprise the target is selected (<code>x_0</code>)</li>
+<li>a single comprising <code>x_0</code> and <code>x_1</code> was selected (<code>x_2</code> -&gt; <code>x_0</code> and <code>x_4</code> -&gt; <code>x_1</code>)</li>
+<li>the two random variables having nothing to do with the target (<code>x_6</code> and <code>x_7</code>)</li>
+</ul>
+<p>Finally, we observe the <code>weights</code> needed in order to transform the selected variables into the components.<br>
+Notice the first component is almost entirely the variable <code>target</code></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-15">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_ordered</span><span class="o">.</span><span class="n">weights</span>
+</pre></div>
+<div id="cell-15" class="clipboard-copy-txt">fsca_ordered.weights</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FSCA_ORD_C0</th>
+      <th>FSCA_ORD_C1</th>
+      <th>FSCA_ORD_C2</th>
+      <th>FSCA_ORD_C3</th>
+      <th>FSCA_ORD_C4</th>
+      <th>FSCA_ORD_C5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>target</th>
+      <td>0.999850</td>
+      <td>-0.000050</td>
+      <td>-3.568858e-05</td>
+      <td>-3.584938e-05</td>
+      <td>5.704381e-07</td>
+      <td>2.124531e-07</td>
+    </tr>
+    <tr>
+      <th>x_0</th>
+      <td>0.709017</td>
+      <td>0.704979</td>
+      <td>-6.080654e-07</td>
+      <td>-4.999462e-05</td>
+      <td>7.554854e-07</td>
+      <td>5.241246e-07</td>
+    </tr>
+    <tr>
+      <th>x_4</th>
+      <td>0.497218</td>
+      <td>-0.500909</td>
+      <td>7.083180e-01</td>
+      <td>-8.308572e-07</td>
+      <td>-7.879571e-08</td>
+      <td>-1.818968e-07</td>
+    </tr>
+    <tr>
+      <th>x_2</th>
+      <td>0.505705</td>
+      <td>0.491590</td>
+      <td>9.200891e-03</td>
+      <td>7.087064e-01</td>
+      <td>8.498469e-07</td>
+      <td>9.422453e-07</td>
+    </tr>
+    <tr>
+      <th>x_7</th>
+      <td>-0.005725</td>
+      <td>-0.005029</td>
+      <td>1.599923e-03</td>
+      <td>-4.566615e-03</td>
+      <td>9.999082e-01</td>
+      <td>9.735426e-07</td>
+    </tr>
+    <tr>
+      <th>x_6</th>
+      <td>-0.002125</td>
+      <td>-0.005297</td>
+      <td>3.134868e-04</td>
+      <td>-8.107820e-03</td>
+      <td>-9.812165e-03</td>
+      <td>9.998518e-01</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="needed">NEEDED<a class="anchor-link" href="#needed">&#182;</a></h3><p>Additional examples with real-world data sets</p>
+<h2 id="example-2-refined-selection">Example 2: Refined selection<a class="anchor-link" href="#example-2-refined-selection">&#182;</a></h2><p>Using the exact same data set, perform selection with backward refinement.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-16">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_refined</span> <span class="o">=</span> <span class="n">FSCA</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;refined&#39;</span><span class="p">,</span> <span class="n">standardize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+<div id="cell-16" class="clipboard-copy-txt">fsca_refined = FSCA(n_components = len(X.columns), method='refined', standardize=True)</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-17">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_refined</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+<div id="cell-17" class="clipboard-copy-txt">fsca_refined.fit(X)</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Commencing stepwise construction with target
+ - Added x_0 for criterion=4.98918936245303
+   - no refinement needed
+ - Added x_4 for criterion=5.99914441359842
+   - Replaced x_0 with x_5 to get criterion = 5.999144413609411
+ - Added x_2 for criterion=7.00017884145514
+   - Replaced target with x_3 to get criterion = 7.000178841475345
+ - Added x_7 for criterion=8.00019163206343
+   - Replaced x_2 with target to get criterion = 8.000191632093797
+ - Added x_6 for criterion=8.999995312303328
+   - Replaced target with x_2 to get criterion = 8.999995312303405
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>FSCA(method=&#39;refined&#39;, n_components=6)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-18">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_refined</span><span class="o">.</span><span class="n">kept_column_names</span>
+</pre></div>
+<div id="cell-18" class="clipboard-copy-txt">fsca_refined.kept_column_names</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;x_3&#39;, &#39;x_5&#39;, &#39;x_4&#39;, &#39;x_2&#39;, &#39;x_7&#39;, &#39;x_6&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The set of selected variables is different than the <code>ordered</code> method yet more intuitive as only the random variables have been selected by the algorithm.<br>
+All explained variance within the data set should be represented by these variables rather than a conglomerate of derived variables.</p>
+<p>Note that the refined eigenvalues are all roughly equal.<br>
+This is reasonable since the final selected set of variables were all randomly generated and independent of one another.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-19">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_refined</span><span class="o">.</span><span class="n">eigvals_refined</span>
+</pre></div>
+<div id="cell-19" class="clipboard-copy-txt">fsca_refined.eigvals_refined</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([1.02177928, 1.01014834, 1.0053963 , 0.99933155, 0.98696931,
+       0.97637055])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-20">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_refined</span><span class="o">.</span><span class="n">eigval_cum_refined</span>
+</pre></div>
+<div id="cell-20" class="clipboard-copy-txt">fsca_refined.eigval_cum_refined</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([17.02965462, 33.86546022, 50.6220653 , 67.27759118, 83.72707971,
+       99.99992227])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The principal component factor structure below shows the correlation of each variable to the component in the given column.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-21">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_refined</span><span class="o">.</span><span class="n">component_correlations_refined</span>
+</pre></div>
+<div id="cell-21" class="clipboard-copy-txt">fsca_refined.component_correlations_refined</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FSCA_REF_PC0</th>
+      <th>FSCA_REF_PC1</th>
+      <th>FSCA_REF_PC2</th>
+      <th>FSCA_REF_PC3</th>
+      <th>FSCA_REF_PC4</th>
+      <th>FSCA_REF_PC5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>x_3</th>
+      <td>0.431174</td>
+      <td>0.112738</td>
+      <td>0.363384</td>
+      <td>0.611956</td>
+      <td>-0.484943</td>
+      <td>0.244276</td>
+    </tr>
+    <tr>
+      <th>x_5</th>
+      <td>0.347606</td>
+      <td>0.057338</td>
+      <td>0.284203</td>
+      <td>-0.790015</td>
+      <td>-0.371138</td>
+      <td>0.182332</td>
+    </tr>
+    <tr>
+      <th>x_4</th>
+      <td>-0.651381</td>
+      <td>0.115078</td>
+      <td>-0.256392</td>
+      <td>-0.014727</td>
+      <td>-0.475428</td>
+      <td>0.520071</td>
+    </tr>
+    <tr>
+      <th>x_2</th>
+      <td>-0.493490</td>
+      <td>0.229833</td>
+      <td>0.604741</td>
+      <td>-0.007041</td>
+      <td>-0.211284</td>
+      <td>-0.541517</td>
+    </tr>
+    <tr>
+      <th>x_7</th>
+      <td>0.007102</td>
+      <td>-0.771407</td>
+      <td>-0.206122</td>
+      <td>0.018011</td>
+      <td>-0.481825</td>
+      <td>-0.360436</td>
+    </tr>
+    <tr>
+      <th>x_6</th>
+      <td>0.217160</td>
+      <td>0.577076</td>
+      <td>-0.564484</td>
+      <td>-0.011239</td>
+      <td>-0.333509</td>
+      <td>-0.435690</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The selected variables can be transformed into the corresponding components by producing a <code>weights</code> matrix.<br>
+This <code>weights</code> matrix is produced by dividing the above correlations for each component by the eigenvalue corressponding to the respective component (<code>eigvals_refined</code>)<br>
+The <code>weights</code> matrix is calculated during <code>fit</code> and available as a class member.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-22">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_refined</span><span class="o">.</span><span class="n">weights</span>
+</pre></div>
+<div id="cell-22" class="clipboard-copy-txt">fsca_refined.weights</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FSCA_REF_PC0</th>
+      <th>FSCA_REF_PC1</th>
+      <th>FSCA_REF_PC2</th>
+      <th>FSCA_REF_PC3</th>
+      <th>FSCA_REF_PC4</th>
+      <th>FSCA_REF_PC5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>x_3</th>
+      <td>0.421983</td>
+      <td>0.111605</td>
+      <td>0.361434</td>
+      <td>0.612365</td>
+      <td>-0.491346</td>
+      <td>0.250188</td>
+    </tr>
+    <tr>
+      <th>x_5</th>
+      <td>0.340197</td>
+      <td>0.056762</td>
+      <td>0.282678</td>
+      <td>-0.790544</td>
+      <td>-0.376038</td>
+      <td>0.186745</td>
+    </tr>
+    <tr>
+      <th>x_4</th>
+      <td>-0.637497</td>
+      <td>0.113922</td>
+      <td>-0.255016</td>
+      <td>-0.014737</td>
+      <td>-0.481705</td>
+      <td>0.532657</td>
+    </tr>
+    <tr>
+      <th>x_2</th>
+      <td>-0.482972</td>
+      <td>0.227524</td>
+      <td>0.601495</td>
+      <td>-0.007046</td>
+      <td>-0.214073</td>
+      <td>-0.554622</td>
+    </tr>
+    <tr>
+      <th>x_7</th>
+      <td>0.006951</td>
+      <td>-0.763657</td>
+      <td>-0.205015</td>
+      <td>0.018023</td>
+      <td>-0.488186</td>
+      <td>-0.369159</td>
+    </tr>
+    <tr>
+      <th>x_6</th>
+      <td>0.212532</td>
+      <td>0.571279</td>
+      <td>-0.561455</td>
+      <td>-0.011247</td>
+      <td>-0.337912</td>
+      <td>-0.446235</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="example-3-fscaselector">Example 3: FSCASelector<a class="anchor-link" href="#example-3-fscaselector">&#182;</a></h2><p>The <code>FSCA</code> base class can be used as a feature selector within the scikit-learn ecosystem.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-23">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">narrowgate.screeners.fsca</span> <span class="kn">import</span> <span class="n">FSCASelector</span>
+</pre></div>
+<div id="cell-23" class="clipboard-copy-txt">from narrowgate.screeners.fsca import FSCASelector</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-24">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_select</span> <span class="o">=</span> <span class="n">FSCASelector</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;refined&#39;</span><span class="p">,</span> <span class="n">standardize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fsca_select</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+<div id="cell-24" class="clipboard-copy-txt">fsca_select = FSCASelector(n_components = len(X.columns), method='refined', standardize=True)
+fsca_select.fit(X)</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Commencing stepwise construction with target
+ - Added x_0 for criterion=4.98918936245303
+   - no refinement needed
+ - Added x_4 for criterion=5.99914441359842
+   - Replaced x_0 with x_5 to get criterion = 5.999144413609411
+ - Added x_2 for criterion=7.00017884145514
+   - Replaced target with x_3 to get criterion = 7.000178841475345
+ - Added x_7 for criterion=8.00019163206343
+   - Replaced x_2 with target to get criterion = 8.000191632093797
+ - Added x_6 for criterion=8.999995312303328
+   - Replaced target with x_2 to get criterion = 8.999995312303405
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>FSCASelector()</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-25">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X_selected</span> <span class="o">=</span> <span class="n">fsca_select</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+<div id="cell-25" class="clipboard-copy-txt">X_selected = fsca_select.transform(X)</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-26">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X_selected</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+<div id="cell-26" class="clipboard-copy-txt">X_selected.head()</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x_3</th>
+      <th>x_5</th>
+      <th>x_4</th>
+      <th>x_2</th>
+      <th>x_7</th>
+      <th>x_6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.322935</td>
+      <td>0.972232</td>
+      <td>0.686614</td>
+      <td>0.377136</td>
+      <td>0.671298</td>
+      <td>0.966830</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.542556</td>
+      <td>0.913027</td>
+      <td>0.601223</td>
+      <td>0.317078</td>
+      <td>0.550916</td>
+      <td>0.408457</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.233183</td>
+      <td>0.904828</td>
+      <td>0.607784</td>
+      <td>0.040542</td>
+      <td>0.459207</td>
+      <td>0.008684</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.066666</td>
+      <td>0.326845</td>
+      <td>0.149306</td>
+      <td>0.161198</td>
+      <td>0.591441</td>
+      <td>0.365441</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.535670</td>
+      <td>0.430913</td>
+      <td>0.987275</td>
+      <td>0.663864</td>
+      <td>0.748917</td>
+      <td>0.298618</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-27">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+<div id="cell-27" class="clipboard-copy-txt">X.columns</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Index([&#39;x_0&#39;, &#39;x_1&#39;, &#39;x_2&#39;, &#39;x_3&#39;, &#39;x_4&#39;, &#39;x_5&#39;, &#39;x_6&#39;, &#39;x_7&#39;, &#39;target&#39;], dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-28">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X_selected</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+<div id="cell-28" class="clipboard-copy-txt">X_selected.columns</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Index([&#39;x_3&#39;, &#39;x_5&#39;, &#39;x_4&#39;, &#39;x_2&#39;, &#39;x_7&#39;, &#39;x_6&#39;], dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="example-3-fscatransformer">Example 3: FSCATransformer<a class="anchor-link" href="#example-3-fscatransformer">&#182;</a></h2><p>The <code>FSCA</code> base class can be used as a feature transformer within the scikit-learn ecosystem similar to <code>PCA</code> or <code>KernelPCA</code>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-29">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">narrowgate.screeners.fsca.transformer</span> <span class="kn">import</span> <span class="n">FSCATransformer</span>
+</pre></div>
+<div id="cell-29" class="clipboard-copy-txt">from narrowgate.screeners.fsca.transformer import FSCATransformer</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-30">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">fsca_transformer</span> <span class="o">=</span> <span class="n">FSCATransformer</span><span class="p">(</span><span class="n">n_components</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;refined&#39;</span><span class="p">,</span> <span class="n">standardize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">X_transform</span> <span class="o">=</span> <span class="n">fsca_transformer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+<div id="cell-30" class="clipboard-copy-txt">fsca_transformer = FSCATransformer(n_components = len(X.columns), method='refined', standardize=True)
+X_transform = fsca_transformer.fit_transform(X)</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Commencing stepwise construction with target
+ - Added x_0 for criterion=4.98918936245303
+   - no refinement needed
+ - Added x_4 for criterion=5.99914441359842
+   - Replaced x_0 with x_5 to get criterion = 5.999144413609411
+ - Added x_2 for criterion=7.00017884145514
+   - Replaced target with x_3 to get criterion = 7.000178841475345
+ - Added x_7 for criterion=8.00019163206343
+   - Replaced x_2 with target to get criterion = 8.000191632093797
+ - Added x_6 for criterion=8.999995312303328
+   - Replaced target with x_2 to get criterion = 8.999995312303405
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="CodeMirror cm-s-jupyter">
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-31">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
+                    <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">X_transform</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+<div id="cell-31" class="clipboard-copy-txt">X_transform.head()</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FSCA_REF_PC0</th>
+      <th>FSCA_REF_PC1</th>
+      <th>FSCA_REF_PC2</th>
+      <th>FSCA_REF_PC3</th>
+      <th>FSCA_REF_PC4</th>
+      <th>FSCA_REF_PC5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.434852</td>
+      <td>0.468056</td>
+      <td>-1.207275</td>
+      <td>-1.674851</td>
+      <td>-1.372146</td>
+      <td>-0.223502</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.555851</td>
+      <td>-0.331491</td>
+      <td>0.138235</td>
+      <td>-1.028446</td>
+      <td>-0.616981</td>
+      <td>0.910270</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.245196</td>
+      <td>-1.219311</td>
+      <td>0.011825</td>
+      <td>-1.642865</td>
+      <td>0.739478</td>
+      <td>1.921474</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.394830</td>
+      <td>-1.124441</td>
+      <td>-0.901812</td>
+      <td>-0.392992</td>
+      <td>1.803166</td>
+      <td>-0.397314</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-1.529410</td>
+      <td>-0.751453</td>
+      <td>0.111797</td>
+      <td>0.269276</td>
+      <td>-1.082696</td>
+      <td>0.551341</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="example-4-variable-clustering">Example 4: Variable Clustering<a class="anchor-link" href="#example-4-variable-clustering">&#182;</a></h2><p>Coming soon!</p>
 
 </div>
 </div>
@@ -4064,7 +4769,7 @@ Information Criterion: Mutual Information
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../screeners/univariate/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UnivariateScreener" rel="prev">
+        <a href="../../screeners/fsca_transformer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: FSCATransformer" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -4073,20 +4778,20 @@ Information Criterion: Mutual Information
               <span class="md-footer__direction">
                 Previous
               </span>
-              UnivariateScreener
+              FSCATransformer
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../screeners/bivariate/" class="md-footer__link md-footer__link--next" aria-label="Next: BivariateScreener" rel="next">
+        <a href="../../screeners/hmm_target/" class="md-footer__link md-footer__link--next" aria-label="Next: HMMTargetLinkScreener" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              BivariateScreener
+              HMMTargetLinkScreener
             </div>
           </div>
           <div class="md-footer__button md-icon">
